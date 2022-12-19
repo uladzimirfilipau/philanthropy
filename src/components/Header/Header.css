@@ -1,44 +1,25 @@
 .header {
   border-bottom: 1px solid #f0ece8;
-  height: 120px;
+  padding: 32px 110px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
 }
 
-.header__logo {
-  width: 200px;
-  height: 32px;
-  margin-left: 110px;
+@media screen and (max-width: 1280px) {
+  .header {
+    padding: 32px 55px;
+  }
 }
 
-.header__nav {
-  margin-left: 40px;
-  display: flex;
-  gap: 26px;
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 32px 30px;
+  }
 }
 
-.header__link {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #222;
-}
-
-.header__button {
-  width: 142px;
-  height: 54px;
-  margin-right: 110px;
-  margin-left: auto;
-  background: #ff9c08;
-  border: none;
-  border-radius: 10px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  color: #090909;
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
 }

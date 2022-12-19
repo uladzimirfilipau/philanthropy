@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -8,11 +8,22 @@ import About from '../About/About';
 import Pages from '../Pages/Pages';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import Footer from '../Footer/Footer';
+import PopupMenu from '../PopupMenu/PopupMenu';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleOpenMenu() {
+    setIsMenuOpen(true);
+  }
+
+  function handleCloseMenu() {
+    setIsMenuOpen(false);
+  }
+
   return (
     <>
-      <Header />
+      <Header handleOpenMenu={handleOpenMenu} />
       <Switch>
         <Route exact path='/' component={Main}></Route>
         <Route path='/about' component={About}></Route>
@@ -20,6 +31,8 @@ function App() {
         <Route path='*' component={PageNotFound} />
       </Switch>
       <Footer />
+
+      <PopupMenu isOpen={isMenuOpen} onClose={handleCloseMenu} />
     </>
   );
 }

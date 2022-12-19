@@ -1,24 +1,26 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './Header.css';
-import headerImage from '../../images/philanthropy.svg';
-import { Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
+import Logo from '../Logo/Logo';
+import BurgerButton from '../BurgerButton/BurgerButton';
+import DonateButton from '../DonateButton/DonateButton';
+import { useWindowWidth } from '../../hooks/useWindowSize';
+import { MEDIUM_SCREEN } from '../../utils/consts';
 
-function Header() {
+function Header({ handleOpenMenu }) {
+  const width = useWindowWidth();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    width > MEDIUM_SCREEN ? setIsMobile(true) : setIsMobile(false);
+  }, [width]);
+
   return (
     <header className='header'>
-      <img src={headerImage} alt='Logo' className='header__logo'></img>
-      <nav className='header__nav'>
-        <Link to='/' className='header__link'>
-          Home
-        </Link>
-        <Link to='/about' className='header__link'>
-          About
-        </Link>
-        <Link to='/pages' className='header__link'>
-          Pages
-        </Link>
-      </nav>
-      <button className='header__button'>Donate now</button>
+      <Logo />
+      {isMobile && <Navigation />}
+      {isMobile && <DonateButton />}
+      <BurgerButton handleOpenMenu={handleOpenMenu} />
     </header>
   );
 }
