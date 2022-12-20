@@ -1,0 +1,18 @@
+.footer {
+  align-self: flex-end;
+  background-color: #fef9f2;
+  padding: 176px 110px 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 85px 55px 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 45px 30px 0;
+  }
+}
