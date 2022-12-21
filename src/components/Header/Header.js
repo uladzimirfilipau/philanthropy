@@ -3,9 +3,9 @@ import './Header.css';
 import Navigation from '../Navigation/Navigation';
 import Logo from '../Logo/Logo';
 import BurgerButton from '../BurgerButton/BurgerButton';
-import DonateButton from '../DonateButton/DonateButton';
 import { useWindowWidth } from '../../hooks/useWindowSize';
 import { MEDIUM_SCREEN } from '../../utils/consts';
+import { Link } from 'react-router-dom';
 
 function Header({ handleOpenMenu }) {
   const width = useWindowWidth();
@@ -19,7 +19,7 @@ function Header({ handleOpenMenu }) {
     <header className='header'>
       <Logo />
       {isMobile && <Navigation />}
-      {isMobile && <DonateButton />}
+      {isMobile && <Link className='header__link'>Donate now</Link>}
       <BurgerButton handleOpenMenu={handleOpenMenu} />
     </header>
   );

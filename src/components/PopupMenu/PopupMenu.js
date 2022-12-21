@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import './PopupMenu.css';
 import CloseButton from '../CloseButton/CloseButton';
 import Navigation from '../Navigation/Navigation';
-import DonateButton from '../DonateButton/DonateButton';
 import { useWindowWidth } from '../../hooks/useWindowSize';
 import { MEDIUM_SCREEN } from '../../utils/consts';
+import { Link } from 'react-router-dom';
 
 function PopupMenu({ isOpen, onClose }) {
   const width = useWindowWidth();
@@ -20,7 +20,7 @@ function PopupMenu({ isOpen, onClose }) {
         <section className={`popup-menu ${isOpen && 'popup-menu_opened'}`}>
           <CloseButton onClose={onClose} />
           <Navigation />
-          <DonateButton />
+          <Link className='header__link '>Donate now</Link>
         </section>
       )}
     </>
