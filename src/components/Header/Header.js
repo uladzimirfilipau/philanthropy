@@ -19,7 +19,11 @@ function Header({ handleOpenMenu }) {
     <header className='header'>
       <Logo />
       {isMobile && <Navigation />}
-      {isMobile && <Link className='header__link'>Donate now</Link>}
+      {isMobile && (
+        <Link to='/donate' className='header__link'>
+          Donate now
+        </Link>
+      )}
       <BurgerButton handleOpenMenu={handleOpenMenu} />
     </header>
   );

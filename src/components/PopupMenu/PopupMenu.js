@@ -20,7 +20,9 @@ function PopupMenu({ isOpen, onClose }) {
         <section className={`popup-menu ${isOpen && 'popup-menu_opened'}`}>
           <CloseButton onClose={onClose} />
           <Navigation />
-          <Link className='header__link '>Donate now</Link>
+          <Link to='/donate' className='header__link '>
+            Donate now
+          </Link>
         </section>
       )}
     </>
