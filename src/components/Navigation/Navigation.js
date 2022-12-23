@@ -4,14 +4,14 @@ import './Navigation.css';
 
 function Navigation() {
   return (
-    <nav className='header__nav'>
-      <NavLink to='/' className='header__link'>
+    <nav className='nav'>
+      <NavLink to='/' className='nav__link'>
         Home
       </NavLink>
-      <NavLink to='/about' className='header__link'>
+      <NavLink to='/about' className='nav__link'>
         About
       </NavLink>
-      <NavLink to='/pages' className='header__link'>
+      <NavLink to='/pages' className='nav__link'>
         Pages
       </NavLink>
     </nav>
