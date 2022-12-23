@@ -1,0 +1,34 @@
+.scrollup-button {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 55px;
+  bottom: 55px;
+  padding: 0;
+  border-radius: 10px;
+  background-color: rgb(255, 156, 8);
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  font-size: 30px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 300ms ease;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 1024px) {
+  .scrollup-button {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+.scrollup-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
