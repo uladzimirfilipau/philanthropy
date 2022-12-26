@@ -7,7 +7,7 @@ function Lead() {
   return (
     <section className='lead'>
       <article className='lead__article'>
-        <p className='lead__line'></p>
+        <span className='lead__line' />
         <h1 className='lead__title'>Giving help to those who need it</h1>
         <p className='lead__description'>
           Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit
