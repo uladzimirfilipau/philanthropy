@@ -2,33 +2,44 @@
   width: 100%;
   background-color: #fff;
   border-bottom: 1px solid #f0ece8;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.header__container {
+  max-width: 1440px;
+  width: 100%;
   padding: 32px 110px;
   box-sizing: border-box;
 
   display: flex;
   align-items: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
 }
 
 @media screen and (max-width: 1280px) {
-  .header {
+  .header__container {
     padding: 32px 55px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .header {
+  .header__container {
     padding: 32px 30px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .header__container {
     justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__container {
+    padding: 32px 10px;
   }
 }
 
