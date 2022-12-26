@@ -19,8 +19,8 @@ function PopupMenu({ isOpen, onClose }) {
       {isMobile && (
         <section className={`popup-menu ${isOpen && 'popup-menu_opened'}`}>
           <CloseButton onClose={onClose} />
-          <Navigation />
-          <Link to='/donate' className='header__link '>
+          <Navigation onClose={onClose} />
+          <Link to='/donate' className='header__link' onClick={onClose}>
             Donate now
           </Link>
         </section>

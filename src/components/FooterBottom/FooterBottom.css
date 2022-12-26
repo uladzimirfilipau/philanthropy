@@ -1,7 +1,9 @@
 .footer__bottom {
+  width: 100%;
+  max-width: 1440px;
   border-top: 1px solid #f0ece8;
   margin: 110px 0 0;
-  padding: 37px 0 28px;
+  padding: 37px 110px 28px;
   box-sizing: border-box;
 
   display: flex;
@@ -11,14 +13,27 @@
 
 @media screen and (max-width: 1280px) {
   .footer__bottom {
+    padding: 37px 55px 28px;
     flex-direction: column-reverse;
     gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__bottom {
+    padding: 37px 30px 28px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer__bottom {
     margin: 55px 0 0;
+    padding: 37px 10px 28px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__bottom {
   }
 }
 

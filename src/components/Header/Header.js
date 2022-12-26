@@ -17,14 +17,16 @@ function Header({ handleOpenMenu }) {
 
   return (
     <header className='header'>
-      <Logo />
-      {isMobile && <Navigation />}
-      {isMobile && (
-        <Link to='/donate' className='header__link'>
-          Donate now
-        </Link>
-      )}
-      <BurgerButton handleOpenMenu={handleOpenMenu} />
+      <section className='header__container'>
+        <Logo />
+        {isMobile && <Navigation />}
+        {isMobile && (
+          <Link to='/donate' className='header__link'>
+            Donate now
+          </Link>
+        )}
+        <BurgerButton handleOpenMenu={handleOpenMenu} />
+      </section>
     </header>
   );
 }
