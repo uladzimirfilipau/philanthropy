@@ -6,6 +6,7 @@ import Results from '../Results/Results';
 import Video from '../Video/Video';
 import Help from '../Help/Help';
 import Testimonials from '../Testimonials/Testimonials';
+import News from '../News/News';
 
 function Main() {
   return (
@@ -16,6 +17,7 @@ function Main() {
       <Video />
       <Help />
       <Testimonials />
+      <News />
     </main>
   );
 }
