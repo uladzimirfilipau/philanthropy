@@ -1,0 +1,231 @@
+.testimonials {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 108px;
+  padding: 200px 110px;
+  box-sizing: border-box;
+  background: #fef9f2;
+  position: relative;
+}
+
+@media screen and (max-width: 1280px) {
+  .testimonials {
+    padding: 100px 55px 180px;
+    gap: 80px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .testimonials {
+    padding: 50px 10px;
+  }
+}
+
+.testimonials__article {
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  .testimonials__article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.testimonials__image {
+  width: 100%;
+  max-width: 555px;
+}
+
+.testimonials__quote {
+  max-width: 388px;
+  padding: 68px 42px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #f0ece8;
+  box-shadow: 0px 2px 12px rgba(43, 43, 43, 0.06);
+  border-radius: 12px;
+
+  display: grid;
+  align-content: flex-start;
+  grid-template-areas:
+    'quote'
+    'title'
+    'subtitle';
+
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+}
+
+@media screen and (max-width: 1280px) {
+  .testimonials__quote {
+    max-width: 320px;
+    padding: 40px 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .testimonials__quote {
+    padding: 34px 21px;
+    bottom: -20px;
+    right: -20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .testimonials__quote {
+    position: static;
+    margin-top: -100px;
+  }
+}
+
+.testimonials__quote-title {
+  grid-area: title;
+  margin: 17px 0 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #090909;
+}
+
+.testimonials__quote-subtitle {
+  grid-area: subtitle;
+  margin: 15px 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #989898;
+}
+
+.testimonials__quote-text {
+  grid-area: quote;
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #6e6e6e;
+}
+
+.testimonials__description {
+  align-self: center;
+}
+
+@media screen and (max-width: 640px) {
+  .testimonials__description {
+    align-self: stretch;
+  }
+}
+
+.testimonials__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ff9c08;
+}
+
+.testimonials__subtitle {
+  max-width: 435px;
+  margin: 20px 0 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 58px;
+  color: #090909;
+}
+
+.testimonials__text {
+  max-width: 509px;
+  margin: 25px 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: #6e6e6e;
+}
+
+.testimonials__list {
+  list-style-type: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.testimonials__list-item {
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #090909;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.testimonials__list-item::before {
+  content: url(../../images/list-style-icon.svg);
+}
+
+.testimonials__link {
+  display: block;
+  width: 180px;
+  margin: 48px 0 0;
+  padding: 26px 36px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  background: #ff9c08;
+
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #090909;
+
+  transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
+  transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials__link {
+    width: 100%;
+    align-self: flex-end;
+  }
+}
+
+.testimonials__link:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #f08200;
+  transform: translate3d(0px, -3px, 0.01px);
+}

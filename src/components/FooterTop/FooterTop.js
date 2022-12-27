@@ -22,19 +22,19 @@ function FooterTop() {
           <Link to='/about' className='footer__link'>
             About
           </Link>
-          <Link to='/about' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Blog
           </Link>
-          <Link to='/about' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Blog post
           </Link>
           <Link to='/donate' className='footer__link'>
             Donate
           </Link>
-          <Link to='/donate' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Donate Single
           </Link>
-          <Link to='/donate' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Contact
           </Link>
         </nav>
@@ -44,19 +44,19 @@ function FooterTop() {
           <Link to='/' className='footer__link'>
             Start here
           </Link>
-          <Link to='/about' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Styleguide
           </Link>
-          <Link to='/about' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Password Protected
           </Link>
           <Link to='/notfound' className='footer__link'>
             404 Not found
           </Link>
-          <Link to='/donate' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Licenses
           </Link>
-          <Link to='/donate' className='footer__link'>
+          <Link to='/notfound' className='footer__link'>
             Changelog
           </Link>
         </nav>

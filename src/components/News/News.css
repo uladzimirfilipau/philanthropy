@@ -1,0 +1,234 @@
+.news {
+  padding: 198px 110px 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .news {
+    padding: 100px 55px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news {
+    padding: 50px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .news {
+    padding: 50px 10px;
+  }
+}
+
+.news__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #ff9c08;
+}
+
+.news__subtitle {
+  margin: 17px 0 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 58px;
+  text-align: center;
+  color: #090909;
+}
+
+.news__list {
+  list-style-type: none;
+  margin: 49px 0 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+}
+
+@media screen and (max-width: 1024px) {
+  .news__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+}
+
+.news__item {
+  transition: transform 300ms ease;
+  transform-style: preserve-3d;
+}
+
+.news__item:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -3px, 0.01px);
+  text-decoration: #f08200;
+  color: #f08200;
+}
+
+.news__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.news__item-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.news__item-description {
+  max-width: 548px;
+  padding: 49px 49px 44px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #f0ece8;
+  box-shadow: 0px 2px 12px rgba(43, 43, 43, 0.08);
+  border-radius: 12px;
+
+  position: relative;
+  top: -80px;
+}
+
+@media screen and (max-width: 640px) {
+  .news__item-description {
+    width: 100%;
+    padding: 32px 24px 40px;
+    margin: 0;
+    top: 0;
+  }
+}
+
+.news__item-container {
+  display: flex;
+  gap: 16px;
+}
+
+.news__item-link {
+  display: block;
+  max-width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 13px 23px 17px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #f0ece8;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #090909;
+}
+
+.news__item-date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #6e6e6e;
+}
+
+@media screen and (max-width: 640px) {
+  .news__item-date {
+    font-size: 15px;
+  }
+}
+
+.news__item-title {
+  margin: 18px 0 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  color: #090909;
+}
+
+.news__item-readmore {
+  display: block;
+  margin: 32px 0 0;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #090909;
+}
+
+.news__item-readmore:hover {
+  color: #f08200;
+}
+
+.news__links {
+  list-style-type: none;
+  margin: -15px 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+@media screen and (max-width: 768px) {
+  .news__links {
+    width: 100%;
+    margin-top: 40px;
+    align-self: center;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.news__link {
+  display: block;
+  padding: 23px 38px 28px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff9c08;
+
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #090909;
+
+  transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
+  transform-style: preserve-3d;
+}
+
+.news__link:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #f08200;
+  transform: translate3d(0px, -3px, 0.01px);
+}
+
+.news__link_white {
+  background: #fff;
+  border: 1px solid #f0ece8;
+  box-shadow: 0px 4px 10px rgba(43, 43, 43, 0.04);
+}
+
+.news__link_white:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #090909;
+}
