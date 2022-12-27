@@ -4,6 +4,7 @@ import Lead from '../Lead/Lead';
 import AboutUs from '../AboutUs/AboutUs';
 import Results from '../Results/Results';
 import Video from '../Video/Video';
+import Help from '../Help/Help';
 
 function Main() {
   return (
@@ -12,6 +13,7 @@ function Main() {
       <AboutUs />
       <Results />
       <Video />
+      <Help />
     </main>
   );
 }
