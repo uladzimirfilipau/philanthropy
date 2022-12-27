@@ -5,6 +5,7 @@ import AboutUs from '../AboutUs/AboutUs';
 import Results from '../Results/Results';
 import Video from '../Video/Video';
 import Help from '../Help/Help';
+import Testimonials from '../Testimonials/Testimonials';
 
 function Main() {
   return (
@@ -14,6 +15,7 @@ function Main() {
       <Results />
       <Video />
       <Help />
+      <Testimonials />
     </main>
   );
 }
