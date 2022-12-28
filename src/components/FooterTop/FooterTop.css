@@ -1,8 +1,10 @@
 .footer__top {
+  width: 100%;
   max-width: 1440px;
   padding: 0 110px;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   gap: 60px;
 }
 
@@ -10,6 +12,7 @@
   .footer__top {
     padding: 0 55px;
     display: grid;
+    justify-content: space-evenly;
   }
 }
 
