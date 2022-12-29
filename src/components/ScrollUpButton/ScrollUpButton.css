@@ -44,6 +44,11 @@
   }
 }
 
+.scrollup-button::after {
+  position: absolute;
+  content: '\1F869';
+}
+
 .scrollup-button:hover {
   cursor: pointer;
   transform: scale(1.1);

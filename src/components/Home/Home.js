@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css';
+import './Home.css';
 import Lead from '../Lead/Lead';
 import AboutUs from '../AboutUs/AboutUs';
 import Results from '../Results/Results';
@@ -8,7 +8,7 @@ import Help from '../Help/Help';
 import Testimonials from '../Testimonials/Testimonials';
 import News from '../News/News';
 
-function Main() {
+function Home() {
   return (
     <main className='main'>
       <Lead />
@@ -22,4 +22,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;

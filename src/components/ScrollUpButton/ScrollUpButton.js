@@ -18,11 +18,7 @@ function ScrollUpButton() {
   }, []);
 
   return (
-    showScrollUp && (
-      <button type='button' className='scrollup-button' onClick={handleScrollUp}>
-        &#129121;
-      </button>
-    )
+    showScrollUp && <button type='button' className='scrollup-button' onClick={handleScrollUp} />
   );
 }
 

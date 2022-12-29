@@ -1,0 +1,142 @@
+.charity {
+  width: 100%;
+  max-width: 1440px;
+  padding: 120px 110px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1280px) {
+  .charity {
+    padding: 74px 55px 0;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .charity {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .charity {
+    padding: 50px 10px;
+  }
+}
+
+.charity__span {
+  display: block;
+  margin: 0 0 24px;
+  width: 140px;
+  height: 4px;
+  background: #ff9c08;
+}
+
+.charity__container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 64px;
+}
+
+@media screen and (max-width: 1280px) {
+  .charity__container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.charity__title {
+  max-width: 695px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1.333em;
+  color: #090909;
+}
+
+@media screen and (max-width: 1280px) {
+  .charity__title {
+    margin: 0 0 40px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .charity__title {
+    font-size: 36px;
+  }
+}
+
+.charity__links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: flex;
+  gap: 28px;
+}
+
+@media screen and (max-width: 768px) {
+  .charity__links {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.charity__link {
+  min-width: 190px;
+  display: block;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #ff9c08;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.111em;
+  color: #090909;
+  text-align: center;
+
+  transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
+  transform-style: preserve-3d;
+}
+
+.charity__link:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #f08200;
+  transform: translate3d(0px, -3px, 0.01px);
+}
+
+.charity__link_white {
+  background: #fff;
+  border: 1px solid #f0ece8;
+  box-shadow: 0px 4px 10px rgba(43, 43, 43, 0.04);
+}
+
+.charity__link_white:hover {
+  cursor: pointer;
+  color: #fff;
+  background: #090909;
+}
+
+.charity__image {
+  width: 50%;
+  border-radius: 16px;
+  align-self: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .charity__image {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .charity__image {
+    width: 100%;
+  }
+}

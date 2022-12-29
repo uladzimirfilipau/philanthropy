@@ -12,37 +12,43 @@ function News() {
 
       <ul className='news__list'>
         <li className='news__item'>
-          <img src={newsImageFirst} alt='Products' className='news__item-image' />
-          <article className='news__item-description'>
-            <div className='news__item-container'>
+          <figure className='news__figure'>
+            <img src={newsImageFirst} alt='Products' className='news__item-image' />
+            <figcaption className='news__item-description'>
+              <div className='news__item-container'>
+                <Link to='/about' className='news__item-button'>
+                  Articles
+                </Link>
+                <p className='news__item-date'>Feb 11, 2022</p>
+              </div>
+              <h4 className='news__item-title'>
+                What to donate to a food bank and what to avoid ?
+              </h4>
               <Link to='/about' className='news__item-link'>
-                Articles
+                Read more
               </Link>
-              <p className='news__item-date'>Feb 11, 2022</p>
-            </div>
-            <h4 className='news__item-title'>What to donate to a food bank and what to avoid ?</h4>
-            <Link to='/about' className='news__item-readmore'>
-              Read more &#129122;
-            </Link>
-          </article>
+            </figcaption>
+          </figure>
         </li>
 
         <li className='news__item'>
-          <img src={newsImageSecond} alt='Clothes' className='news__item-image' />
-          <article className='news__item-description'>
-            <div className='news__item-container'>
+          <figure className='news__figure'>
+            <img src={newsImageSecond} alt='Clothes' className='news__item-image' />
+            <figcaption className='news__item-description'>
+              <div className='news__item-container'>
+                <Link to='/about' className='news__item-button'>
+                  Resources
+                </Link>
+                <p className='news__item-date'>Feb 11, 2022</p>
+              </div>
+              <h4 className='news__item-title'>
+                13 ways to give to charity without breaking your budget
+              </h4>
               <Link to='/about' className='news__item-link'>
-                Resources
+                Read more
               </Link>
-              <p className='news__item-date'>Feb 11, 2022</p>
-            </div>
-            <h4 className='news__item-title'>
-              13 ways to give to charity without breaking your budget
-            </h4>
-            <Link to='/about' className='news__item-readmore'>
-              Read more &#129122;
-            </Link>
-          </article>
+            </figcaption>
+          </figure>
         </li>
       </ul>
 
