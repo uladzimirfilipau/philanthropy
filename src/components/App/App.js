@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import Header from '../Header/Header';
-import Main from '../Main/Main';
+import Home from '../Home/Home';
+import About from '../About/About';
 import Donate from '../Donate/Donate';
 import Footer from '../Footer/Footer';
 import PopupMenu from '../PopupMenu/PopupMenu';
@@ -25,7 +26,8 @@ function App() {
     <>
       <Header handleOpenMenu={handleOpenMenu} onClose={handleCloseMenu} />
       <Switch>
-        <Route exact path='/' component={Main}></Route>
+        <Route exact path='/' component={Home}></Route>
+        <Route path='/about' component={About}></Route>
         <Route path='/donate' component={Donate}></Route>
         <Route path='*' component={PageNotFound} />
       </Switch>
