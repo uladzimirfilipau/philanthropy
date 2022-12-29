@@ -6,17 +6,17 @@ import { Link } from 'react-router-dom';
 function Testimonials() {
   return (
     <section className='testimonials' aria-label='Testimonials'>
-      <article className='testimonials__article'>
+      <figure className='testimonials__figure'>
         <img src={image} alt='Two girls' className='testimonials__image' />
-        <section className='testimonials__quote'>
-          <h4 className='testimonials__quote-title'>Amara Onai</h4>
-          <h5 className='testimonials__quote-subtitle'>Citizen of South Africa</h5>
-          <blockquote className='testimonials__quote-text'>
+        <figcaption className='testimonials__figcaption'>
+          <p className='testimonials__figcaption-title'>Amara Onai</p>
+          <p className='testimonials__figcaption-subtitle'>Citizen of South Africa</p>
+          <blockquote className='testimonials__figcaption-text'>
             “Ultrices eros in cursus turpis massa tincidunt sem nulla pharetra diam sit amet nisl
             suscipit adipis.”
           </blockquote>
-        </section>
-      </article>
+        </figcaption>
+      </figure>
 
       <article className='testimonials__description'>
         <h2 className='testimonials__title'>Testimonials</h2>
