@@ -161,6 +161,12 @@
   color: #090909;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonials__subtitle {
+    font-size: 30px;
+  }
+}
+
 .testimonials__text {
   max-width: 509px;
   margin: 25px 0 0;

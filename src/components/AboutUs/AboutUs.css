@@ -150,6 +150,12 @@
   color: #090909;
 }
 
+@media screen and (max-width: 768px) {
+  .aboutus__subtitle {
+    font-size: 30px;
+  }
+}
+
 .aboutus__text {
   margin: 0;
   font-style: normal;
