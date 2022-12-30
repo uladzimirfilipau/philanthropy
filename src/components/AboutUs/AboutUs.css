@@ -153,6 +153,7 @@
 @media screen and (max-width: 768px) {
   .aboutus__subtitle {
     font-size: 30px;
+    line-height: 40px;
   }
 }
 

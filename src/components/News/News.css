@@ -56,6 +56,7 @@
 @media screen and (max-width: 768px) {
   .news__subtitle {
     font-size: 30px;
+    line-height: 40px;
   }
 }
 
@@ -198,7 +199,6 @@
 .news__item-link::after {
   position: absolute;
   content: '\2794';
-  margin-top: 1px;
   margin-left: 3px;
 }
 
