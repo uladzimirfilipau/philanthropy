@@ -46,7 +46,7 @@
 
 .scrollup-button::after {
   position: absolute;
-  content: '\1F869';
+  content: '\1F815';
 }
 
 .scrollup-button:hover {

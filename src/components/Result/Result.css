@@ -43,6 +43,7 @@
 @media screen and (max-width: 768px) {
   .result__subtitle {
     font-size: 30px;
+    line-height: 40px;
   }
 }
 
