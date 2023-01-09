@@ -7,8 +7,8 @@ function Story() {
     <section className='story'>
       <img src={image02} alt='A small child in the arms of a woman' className='story__image' />
       <article className='story__article'>
-        <h2 className='story__title'>Our story</h2>
-        <h3 className='story__subtitle'>Take a look at the big impact we have done</h3>
+        <p className='story__subtitle'>Our story</p>
+        <h2 className='story__title'>Take a look at the big impact we have done</h2>
         <p className='story__text'>
           Lorem ipsum dolor sit amet, consectetur{' '}
           <span className='story__text-span'>adipiscing</span> elit lobortis arcu enim urna
