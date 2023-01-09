@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 import Lead from '../Lead/Lead';
 import AboutUs from '../AboutUs/AboutUs';
-import Results from '../Results/Results';
+import ResultsHome from '../ResultsHome/ResultsHome';
 import Video from '../Video/Video';
 import Help from '../Help/Help';
 import Testimonials from '../Testimonials/Testimonials';
@@ -13,7 +13,7 @@ function Home() {
     <main className='main'>
       <Lead />
       <AboutUs />
-      <Results />
+      <ResultsHome />
       <Video />
       <Help />
       <Testimonials />
