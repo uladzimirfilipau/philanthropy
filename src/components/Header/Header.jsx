@@ -17,7 +17,7 @@ function Header({ handleOpenMenu }) {
 
   return (
     <header className='header'>
-      <section className='header__container'>
+      <section className='header__container' aria-label='Navigation Links'>
         <Logo />
         {isMobile && <Navigation />}
         {isMobile && (
