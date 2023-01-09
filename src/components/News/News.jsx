@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import './News.css';
 import newsImageFirst from '../../images/news-01.png';
 import newsImageSecond from '../../images/news-02.png';
+import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import ButtonAbout from '../ButtonAbout/ButtonAbout';
+import { buttonNewsText } from '../../utils/consts';
 
 function News() {
   return (
     <section className='news'>
-      <h2 className='news__title'>News & Resources</h2>
-      <h3 className='news__subtitle'>Read our latest news</h3>
+      <p className='news__subtitle'>News & Resources</p>
+      <h2 className='news__title'>Read our latest news</h2>
 
       <ul className='news__list'>
         <li className='news__item'>
@@ -21,9 +24,9 @@ function News() {
                 </Link>
                 <p className='news__item-date'>Feb 11, 2022</p>
               </div>
-              <h4 className='news__item-title'>
+              <h3 className='news__item-title'>
                 What to donate to a food bank and what to avoid ?
-              </h4>
+              </h3>
               <Link to='/about' className='news__item-link'>
                 Read more
               </Link>
@@ -41,9 +44,9 @@ function News() {
                 </Link>
                 <p className='news__item-date'>Feb 11, 2022</p>
               </div>
-              <h4 className='news__item-title'>
+              <h3 className='news__item-title'>
                 13 ways to give to charity without breaking your budget
-              </h4>
+              </h3>
               <Link to='/about' className='news__item-link'>
                 Read more
               </Link>
@@ -54,14 +57,10 @@ function News() {
 
       <ul className='news__links'>
         <li>
-          <Link to='/donate' className='news__link'>
-            Donate now
-          </Link>
+          <ButtonDonate />
         </li>
         <li>
-          <Link to='/about' className='news__link news__link_white'>
-            Read more news
-          </Link>
+          <ButtonAbout buttonText={buttonNewsText} />
         </li>
       </ul>
     </section>
