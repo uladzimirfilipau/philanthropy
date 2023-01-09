@@ -46,9 +46,16 @@
 
 .scrollup-button::after {
   position: absolute;
-  content: '\1F815';
+  content: '\2794';
+  transform: rotate(-90deg);
 }
 
+@media screen and (max-width: 768px) {
+  .scrollup-button::after {
+    width: 42px;
+    height: 42px;
+  }
+}
 .scrollup-button:hover {
   cursor: pointer;
   transform: scale(1.1);

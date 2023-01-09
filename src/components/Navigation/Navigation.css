@@ -13,20 +13,22 @@
 
 .nav__link {
   text-decoration: none;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  color: #222;
+
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight-400);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  color: var(--text-color-black);
 }
 
 @media screen and (max-width: 768px) {
   .nav__link {
-    font-size: 40px;
-    line-height: 60px;
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
   }
 }
 
 .nav__link:hover {
-  color: #ff9c08;
+  color: var(--text-color-orange);
 }
