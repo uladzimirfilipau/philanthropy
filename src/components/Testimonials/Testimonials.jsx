@@ -1,7 +1,7 @@
 import React from 'react';
 import './Testimonials.css';
 import image from '../../images/testimonials-image.png';
-import { Link } from 'react-router-dom';
+import ButtonDonate from '../ButtonDonate/ButtonDonate';
 
 function Testimonials() {
   return (
@@ -18,9 +18,9 @@ function Testimonials() {
         </figcaption>
       </figure>
 
-      <article className='testimonials__description'>
-        <h2 className='testimonials__title'>Testimonials</h2>
-        <h3 className='testimonials__subtitle'>See how we are making a difference</h3>
+      <article className='testimonials__article'>
+        <p className='testimonials__subtitle'>Testimonials</p>
+        <h2 className='testimonials__title'>See how we are making a difference</h2>
         <p className='testimonials__text'>
           Vitae aliquet nec ullamcorper sit amet risus nullam eget felis etolme netus et malesuada
           fames urna nec tincidunt praesen
@@ -33,9 +33,7 @@ function Testimonials() {
           <li className='testimonials__list-item'>Nibh mauris cursus mattis molestie a iaculis</li>
         </ul>
 
-        <Link to='/donate' className='testimonials__link'>
-          Donate now
-        </Link>
+        <ButtonDonate />
       </article>
     </section>
   );
