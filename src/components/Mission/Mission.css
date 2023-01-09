@@ -1,13 +1,12 @@
 .mission {
-  width: 100%;
   max-width: 1440px;
-  background-color: #fef9f2;
-  padding: 0 110px 200px;
+  background-color: var(--section-background-color-light-orange);
+  padding: 0 110px 100px;
   box-sizing: border-box;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
-  gap: 84px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 42px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -19,7 +18,7 @@
 @media screen and (max-width: 1024px) {
   .mission {
     grid-template-columns: 1fr;
-    padding: 50px 110px;
+    padding: var(--section-padding-1024px);
     gap: 40px;
   }
 }
@@ -45,7 +44,7 @@
 .mission__article_back {
   background-color: #fff;
   border-radius: 16px;
-  padding: 50px 80px;
+  padding: 50px 60px;
   box-sizing: border-box;
 }
 
@@ -63,81 +62,64 @@
 
 @media screen and (max-width: 320px) {
   .mission__article_back {
-    padding: 25px 10px;
+    padding: 25px 20px;
   }
 }
 
-.mission__title {
-  margin: 0 0 16px;
-  color: #ff9c08;
-  font-size: 20px;
-  line-height: 1.1em;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .mission__subtitle {
-  margin: 0 0 24px;
-  color: #090909;
-  font-size: 42px;
-  line-height: 1.381em;
-  font-weight: 700;
+  margin: 0 0 16px;
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight-400);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  text-transform: var(--text-transform);
+  color: var(--text-color-orange);
 }
 
 @media screen and (max-width: 768px) {
   .mission__subtitle {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: var(--text-font-size-768px);
+    line-height: var(--text-line-height-768px);
+  }
+}
+
+.mission__title {
+  margin: 0 0 24px;
+  font-family: var(--h2-font-family);
+  font-style: var(--h2-font-style);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color-black);
+}
+
+@media screen and (max-width: 768px) {
+  .mission__title {
+    font-size: var(--h2-font-size-768px);
+    line-height: var(--h2-line-height-768px);
   }
 }
 
 .mission__text {
   margin: 0 0 24px;
-  color: #6e6e6e;
-  font-size: 18px;
-  line-height: 1.667em;
-  font-weight: 400;
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight-400);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  color: var(--text-color-gray);
 }
 
-.mission__text-span {
-  color: #090909;
-}
-
-.mission__link {
-  display: block;
-  width: 180px;
-  padding: 23px 38px 28px;
-  box-sizing: border-box;
-  align-self: flex-start;
-  background: #ff9c08;
-  border-radius: 10px;
-  border: none;
-  margin: 50px 0 0;
-  text-decoration: none;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  color: #090909;
-
-  transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
-}
-
-@media screen and (max-width: 640px) {
-  .mission__link {
-    width: 100%;
+@media screen and (max-width: 768px) {
+  .mission__text {
+    font-size: var(--text-font-size-768px);
+    line-height: var(--text-line-height-768px);
   }
 }
 
-.mission__link:hover {
-  cursor: pointer;
-  color: #fff;
-  background-color: #f08200;
-  transform: translate3d(0px, -3px, 0.01px);
+.mission__text-span {
+  color: var(--text-color-black);
 }
 
 .mission__list {
@@ -151,12 +133,21 @@
 }
 
 .mission__list-item {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.111em;
-  color: #090909;
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight-700);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  color: var(--text-color-black);
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .mission__list-item {
+    font-size: var(--text-font-size-768px);
+    line-height: var(--text-line-height-768px);
+  }
 }
 
 .mission__list-item::before {
