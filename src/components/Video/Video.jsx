@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import './Video.css';
 import backgroundImage from '../../images/video-image.png';
 import playIcon from '../../images/video-play-icon.svg';
+import ButtonAbout from '../ButtonAbout/ButtonAbout';
+import { buttonLeadText } from '../../utils/consts';
 
 function Video() {
   return (
     <section className='video'>
-      <h2 className='video__title'>Take a look at our video</h2>
-      <h3 className='video__subtitle'>We have helped over 200 vulnerable communities worldwide</h3>
+      <p className='video__subtitle'>Take a look at our video</p>
+      <h2 className='video__title'>We have helped over 200 vulnerable communities worldwide</h2>
 
       <ul className='video__links'>
         <li>
@@ -17,9 +19,7 @@ function Video() {
           </Link>
         </li>
         <li>
-          <Link to='/about' className='video__link video__link_white'>
-            About our charity
-          </Link>
+          <ButtonAbout buttonText={buttonLeadText} />
         </li>
       </ul>
 
@@ -30,7 +30,7 @@ function Video() {
 
       <ul className='video__articles'>
         <li className='video__article'>
-          <h4 className='video__article-title'>The goal and mission behind</h4>
+          <h3 className='video__article-title'>The goal and mission behind</h3>
           <p className='video__article-text'>
             Cursus metus aliquam eleifend mi in nulla posuere faucibus interdum posuere lorem ipsum
             dolor sit amet hendrerit dolor magna eget est lorem. Auctor urna nunc id cursus metus
@@ -39,7 +39,7 @@ function Video() {
         </li>
 
         <li className='video__article'>
-          <h4 className='video__article-title'>How our charity got started</h4>
+          <h3 className='video__article-title'>How our charity got started</h3>
           <p className='video__article-text'>
             Vitae aliquet nec ullamcorper sit amet risus nullam eget felis et netus et malesuada
             fames urna nec tincidunt praesent semper feugiat metus aliquam eleifend mi in nulla
