@@ -1,7 +1,9 @@
 import React from 'react';
 import './Lead.css';
 import leadImage from '../../images/lead-image.png';
-import { Link } from 'react-router-dom';
+import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import ButtonAbout from '../ButtonAbout/ButtonAbout';
+import { buttonLeadText } from '../../utils/consts';
 
 function Lead() {
   return (
@@ -13,16 +15,12 @@ function Lead() {
           Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit
           aliquam sit nullam.
         </p>
-        <ul className='lead__links'>
+        <ul className='lead__buttons'>
           <li>
-            <Link to='/donate' className='lead__link lead__link_orange'>
-              Donate now
-            </Link>
+            <ButtonDonate />
           </li>
           <li>
-            <Link to='/about' className='lead__link lead__link_white'>
-              About our charity
-            </Link>
+            <ButtonAbout buttonText={buttonLeadText} />
           </li>
         </ul>
       </article>
