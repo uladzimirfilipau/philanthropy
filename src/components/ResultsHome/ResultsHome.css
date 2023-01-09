@@ -1,5 +1,6 @@
 .results {
-  padding: 200px 110px;
+  max-width: 1440px;
+  padding: var(--section-padding);
   box-sizing: border-box;
 
   display: flex;
@@ -10,74 +11,75 @@
 
 @media screen and (max-width: 1280px) {
   .results {
-    padding: 100px 55px;
+    padding: var(--section-padding-1280px);
   }
 }
 
 @media screen and (max-width: 1024px) {
   .results {
     flex-direction: column;
-    padding: 50px 40px;
+    padding: var(--section-padding-1024px);
   }
 }
 
 @media screen and (max-width: 768px) {
   .results {
+    width: 100%;
     flex-direction: column;
-    padding: 50px 30px;
+    padding: var(--section-padding-768px);
   }
 }
 
 @media screen and (max-width: 320px) {
   .results {
-    padding: 50px 10px;
+    padding: var(--section-padding-320px);
   }
 }
 
 .results__article {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.results__title {
-  margin: 0;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-
-  color: #ff9c08;
-}
-
 .results__subtitle {
-  margin: 20px 0 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 58px;
-
-  color: #090909;
-}
-
-@media screen and (max-width: 1280px) {
-  .results__subtitle {
-    font-size: 35px;
-    line-height: 45px;
-  }
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  text-transform: var(--text-transform);
+  color: var(--text-color-orange);
 }
 
 @media screen and (max-width: 768px) {
   .results__subtitle {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: var(--text-font-size-768px);
+    line-height: var(--text-line-height-768px);
+  }
+}
+
+.results__title {
+  margin: 20px 0 0;
+  font-family: var(--h2-font-family);
+  font-style: var(--h2-font-style);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color-black);
+}
+
+@media screen and (max-width: 768px) {
+  .results__title {
+    font-size: var(--h2-font-size-768px);
+    line-height: var(--h2-line-height-768px);
   }
 }
 
 .results__table {
   list-style-type: none;
-  margin: 30px 0 0;
+  margin: 30px 0 72px;
   padding: 0;
 
   display: grid;
@@ -98,6 +100,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .results__table {
+    margin: 30px 0 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
   .results__table {
     display: flex;
     flex-wrap: wrap;
@@ -121,11 +129,12 @@
 .results__cell-title {
   grid-area: title;
   margin: 0;
+  font-family: var(--h3-font-family);
   font-style: normal;
   font-weight: 700;
   font-size: 38px;
   line-height: 44px;
-  color: #090909;
+  color: var(--h3-color-black);
 }
 
 @media screen and (max-width: 768px) {
@@ -138,48 +147,16 @@
 .results__cell-text {
   grid-area: text;
   margin: 9px 0 0;
+  font-family: var(--text-font-family);
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--text-font-weight-400);
+  font-size: var(--text-font-size-768px);
   line-height: 20px;
-  color: #6e6e6e;
+  color: var(--text-color-gray);
 }
 
-.results__link {
-  display: block;
-  width: 180px;
-  padding: 23px 38px 28px;
-  box-sizing: border-box;
+.results__button {
   align-self: flex-start;
-  background: #ff9c08;
-  border-radius: 10px;
-  border: none;
-  margin: 72px 0 0;
-  text-decoration: none;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  text-align: center;
-  color: #090909;
-
-  transition: background-color 300ms ease, transform 300ms ease, color 300ms ease;
-  transform-style: preserve-3d;
-}
-
-@media screen and (max-width: 768px) {
-  .results__link {
-    width: 100%;
-    margin: 40px 0 0;
-  }
-}
-
-.results__link:hover {
-  cursor: pointer;
-  color: #fff;
-  background-color: #f08200;
-  transform: translate3d(0px, -3px, 0.01px);
 }
 
 .results__image {
