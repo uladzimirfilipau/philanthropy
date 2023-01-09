@@ -1,11 +1,11 @@
 import React from 'react';
-import './Result.css';
+import './ResultsAbout.css';
 
-function Result() {
+function ResultsAbout() {
   return (
     <section className='result'>
-      <h2 className='result__title'>Our results</h2>
-      <h3 className='result__subtitle'>Take a look at the big impact we have done</h3>
+      <p className='result__subtitle'>Our results</p>
+      <h2 className='result__title'>Take a look at the big impact we have done</h2>
 
       <ul className='aboutus__table result__table'>
         <li className='aboutus__table-cell'>
@@ -37,4 +37,4 @@ function Result() {
   );
 }
 
-export default Result;
+export default ResultsAbout;
