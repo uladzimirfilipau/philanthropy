@@ -10,6 +10,9 @@ import Footer from '../Footer/Footer';
 import PopupMenu from '../PopupMenu/PopupMenu';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import SophieMoore from '../SophieMoore/SophieMoore';
+import JohnCarter from '../JohnCarter/JohnCarter';
+import EmilyWeber from '../EmilyWeber/EmilyWeber';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +29,12 @@ function App() {
     <>
       <Header handleOpenMenu={handleOpenMenu} onClose={handleCloseMenu} />
       <Switch>
-        <Route exact path='/' component={Home}></Route>
-        <Route path='/about' component={About}></Route>
-        <Route path='/donate' component={Donate}></Route>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/sophie-moore' component={SophieMoore} />
+        <Route path='/john-carter' component={JohnCarter} />
+        <Route path='/emily-weber' component={EmilyWeber} />
+        <Route path='/donate' component={Donate} />
         <Route path='*' component={PageNotFound} />
       </Switch>
       <Footer />

@@ -22,31 +22,39 @@ function Leaders() {
 
       <ul className='leaders__list'>
         <li className='leaders__item'>
-          <figure className='leaders__figure'>
-            <img src={sophieMoore} alt='Sophie Moore' className='leaders__image' />
-            <figcaption className='leaders__figcaption'>
-              <p className='leaders__figcaption-title'>Sophie Moore</p>
-              <p className='leaders__figcaption-text'>Founder</p>
-            </figcaption>
-          </figure>
+          <Link to='/sophie-moore' className='leaders__item-link'>
+            <figure className='leaders__figure'>
+              <img src={sophieMoore} alt='Sophie Moore' className='leaders__image' />
+              <figcaption className='leaders__figcaption'>
+                <p className='leaders__figcaption-title'>Sophie Moore</p>
+                <p className='leaders__figcaption-text'>Founder</p>
+              </figcaption>
+            </figure>
+          </Link>
         </li>
-        <li>
-          <figure className='leaders__figure'>
-            <img src={johnCarter} alt='John Carter' className='leaders__image' />
-            <figcaption className='leaders__figcaption'>
-              <p className='leaders__figcaption-title'>John Carter</p>
-              <p className='leaders__figcaption-text'>Head of Partnerships</p>
-            </figcaption>
-          </figure>
+
+        <li className='leaders__item'>
+          <Link to='/john-carter' className='leaders__item-link'>
+            <figure className='leaders__figure'>
+              <img src={johnCarter} alt='John Carter' className='leaders__image' />
+              <figcaption className='leaders__figcaption'>
+                <p className='leaders__figcaption-title'>John Carter</p>
+                <p className='leaders__figcaption-text'>Head of Partnerships</p>
+              </figcaption>
+            </figure>
+          </Link>
         </li>
-        <li>
-          <figure className='leaders__figure'>
-            <img src={emilyWeber} alt='Emily Weber' className='leaders__image' />
-            <figcaption className='leaders__figcaption'>
-              <p className='leaders__figcaption-title'>Emily Weber</p>
-              <p className='leaders__figcaption-text'>Head of Donations</p>
-            </figcaption>
-          </figure>
+
+        <li className='leaders__item'>
+          <Link to='/emily-weber' className='leaders__item-link'>
+            <figure className='leaders__figure'>
+              <img src={emilyWeber} alt='Emily Weber' className='leaders__image' />
+              <figcaption className='leaders__figcaption'>
+                <p className='leaders__figcaption-title'>Emily Weber</p>
+                <p className='leaders__figcaption-text'>Head of Donations</p>
+              </figcaption>
+            </figure>
+          </Link>
         </li>
       </ul>
 

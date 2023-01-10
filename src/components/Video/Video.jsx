@@ -23,7 +23,12 @@ function Video() {
         </li>
       </ul>
 
-      <a href='https://www.youtube.com/watch?v=xHegpKx61eE' className='video__container'>
+      <a
+        href='https://www.youtube.com/watch?v=xHegpKx61eE'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='video__container'
+      >
         <img src={playIcon} alt='Play icon' className='video__play-icon' />
         <img src={backgroundImage} alt='Video' className='video__image' />
       </a>

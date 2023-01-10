@@ -2,7 +2,7 @@
   width: 60px;
   height: 60px;
   position: fixed;
-  right: 55px;
+  right: 110px;
   bottom: 55px;
   padding: 0;
   border-radius: 10px;
@@ -21,17 +21,29 @@
   z-index: 100;
 }
 
+@media screen and (max-width: 1440px) {
+  .scrollup-button {
+    right: 55px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .scrollup-button {
+    right: 60px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .scrollup-button {
-    right: 40px;
-    bottom: 40px;
+    right: 50px;
+    bottom: 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .scrollup-button {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     right: 30px;
     bottom: 30px;
   }
@@ -39,23 +51,18 @@
 
 @media screen and (max-width: 320px) {
   .scrollup-button {
-    right: 10px;
-    bottom: 10px;
+    right: 20px;
   }
 }
 
 .scrollup-button::after {
   position: absolute;
+  width: 42px;
+  height: 42px;
   content: '\2794';
   transform: rotate(-90deg);
 }
 
-@media screen and (max-width: 768px) {
-  .scrollup-button::after {
-    width: 42px;
-    height: 42px;
-  }
-}
 .scrollup-button:hover {
   cursor: pointer;
   transform: scale(1.1);
