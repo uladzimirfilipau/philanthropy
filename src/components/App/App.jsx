@@ -11,6 +11,7 @@ import PopupMenu from '../PopupMenu/PopupMenu';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import Leader from '../Leader/Leader';
+import Contact from '../Contact/Contact';
 
 import { LEADERS } from '../../utils/consts';
 import sophieMoore from '../../images/about-leader-01.jpeg';
@@ -44,6 +45,7 @@ function App() {
           <Leader leader={LEADERS.EMILY_WEBER} image={emilyWeber} />
         </Route>
         <Route path='/donate' component={Donate} />
+        <Route path='/contact' component={Contact} />
         <Route path='*' component={PageNotFound} />
       </Switch>
       <Footer />
