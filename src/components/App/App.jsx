@@ -10,9 +10,12 @@ import Footer from '../Footer/Footer';
 import PopupMenu from '../PopupMenu/PopupMenu';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import PageNotFound from '../PageNotFound/PageNotFound';
-import SophieMoore from '../SophieMoore/SophieMoore';
-import JohnCarter from '../JohnCarter/JohnCarter';
-import EmilyWeber from '../EmilyWeber/EmilyWeber';
+import Leader from '../Leader/Leader';
+
+import { LEADERS } from '../../utils/consts';
+import sophieMoore from '../../images/about-leader-01.jpeg';
+import johnCarter from '../../images/about-leader-02.jpeg';
+import emilyWeber from '../../images/about-leader-03.jpeg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,9 +34,15 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
-        <Route path='/sophie-moore' component={SophieMoore} />
-        <Route path='/john-carter' component={JohnCarter} />
-        <Route path='/emily-weber' component={EmilyWeber} />
+        <Route path='/sophie-moore'>
+          <Leader leader={LEADERS.SOPHIE_MOORE} image={sophieMoore} />
+        </Route>
+        <Route path='/john-carter'>
+          <Leader leader={LEADERS.JOHN_CARTER} image={johnCarter} />
+        </Route>
+        <Route path='/emily-weber'>
+          <Leader leader={LEADERS.EMILY_WEBER} image={emilyWeber} />
+        </Route>
         <Route path='/donate' component={Donate} />
         <Route path='*' component={PageNotFound} />
       </Switch>
