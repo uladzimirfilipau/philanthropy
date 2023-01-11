@@ -1,17 +1,17 @@
 import React from 'react';
-import './JohnCarter.css';
-import johnCarter from '../../images/about-leader-02.jpeg';
+import './Leader.css';
+
 import facebookIcon from '../../images/icon-facebook.png';
 import twitterIcon from '../../images/icon-twitter.png';
 import instagramIcon from '../../images/icon-instagram.png';
 import linkedInIcon from '../../images/icon-linkedin.png';
 
-function JohnCarter() {
+function Leader({ leader, image }) {
   return (
     <main className='main'>
       <section className='leader'>
-        <img src={johnCarter} alt='John Carter' className='leader__image' />
-        <h1 className='leader__title'>John Carter</h1>
+        <img src={image} alt={leader.TITLE} className='leader__image' />
+        <h1 className='leader__title'>{leader.TITLE}</h1>
 
         <ul className='leader__links'>
           <li className='leader__item'>
@@ -57,7 +57,7 @@ function JohnCarter() {
         </ul>
 
         <article className='leader__article'>
-          <h2 className='leader__article-subtitle'>About John Carter</h2>
+          <h2 className='leader__article-subtitle'>{leader.SUBTITLE}</h2>
           <p className='leader__article-text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -89,4 +89,4 @@ function JohnCarter() {
   );
 }
 
-export default JohnCarter;
+export default Leader;
