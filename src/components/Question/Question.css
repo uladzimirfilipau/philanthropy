@@ -1,0 +1,112 @@
+.questions__item {
+  width: 100%;
+  max-width: 856px;
+  display: flex;
+  gap: 24px;
+  padding: 52px 68px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f0ece8;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(43 43 43 / 6%);
+
+  transition: ease 300ms;
+}
+
+@media screen and (max-width: 768px) {
+  .questions__item {
+    padding: 25px 34px;
+  }
+}
+
+.questions__item:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -3px, 0.01px);
+}
+
+.questions__button {
+  cursor: pointer;
+  width: 100%;
+  max-width: 50px;
+  max-height: 50px;
+  padding: 0;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #f0ece8;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(43 43 43 / 6%);
+
+  transition: ease 300ms;
+}
+
+.questions__button::after {
+  content: '+';
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 40px;
+  color: #090909;
+
+  transition: ease 300ms;
+}
+
+.questions__button_active {
+  color: var(--button-hover-color-white);
+  background-color: var(--button-hover-background-color-orange);
+  transform: rotate(45deg);
+  transition: ease 300ms;
+}
+
+.questions__button_active::after {
+  content: '+';
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  color: #fff;
+
+  transition: ease 300ms;
+}
+
+.questions__subtitle {
+  margin: 8px 0 16px;
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  color: var(--h3-color-black);
+}
+
+@media screen and (max-width: 768px) {
+  .questions__subtitle {
+    font-size: var(--h3-font-size-768px);
+    line-height: var(--h3-line-height-768px);
+  }
+}
+
+.questions__text {
+  opacity: 0;
+  margin: 0;
+
+  font-family: var(--text-font-family);
+  font-weight: var(--text-font-weight);
+  font-size: var(--text-font-size-768px);
+  line-height: var(--text-line-height-768px);
+  color: var(--text-color-gray);
+
+  animation: fadeIn 300ms forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
