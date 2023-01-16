@@ -18,11 +18,11 @@
   --h1-font-size: 60px;
   --h1-line-height: 80px;
   --h1-color: #090909;
-  --h3-color-orange: #ff9c08;
+  --h1-color-orange: #ff9c08;
   --h1-font-size-1024px: 38px;
   --h1-line-height-1024px: 50px;
-  --h1-font-size-768px: 28px;
-  --h1-line-height-768px: 35px;
+  --h1-font-size-768px: 30px;
+  --h1-line-height-768px: 36px;
 
   --h2-font-family: Georgia, 'Times New Roman', Times, serif;
   --h2-font-style: normal;
@@ -30,18 +30,54 @@
   --h2-font-size: 42px;
   --h2-line-height: 58px;
   --h2-color-black: #090909;
-  --h2-font-size-768px: 30px;
-  --h2-line-height-768px: 40px;
+  --h2-font-size-768px: 26px;
+  --h2-line-height-768px: 32px;
 
   --h3-font-family: Georgia, 'Times New Roman', Times, serif;
   --h3-font-style: normal;
   --h3-font-weight: 700;
-  --h3-font-size: 24px;
-  --h3-line-height: 34px;
+  --h3-font-size: 26px;
+  --h3-line-height: 32px;
+  --h3-font-size-768px: 24px;
+  --h3-line-height-768px: 30px;
+  --h3-font-size-320px: 22px;
+  --h3-line-height-320px: 28px;
   --h3-color-black: #090909;
   --h3-color-orange: #ff9c08;
-  --h3-font-size-768px: 22px;
-  --h3-line-height-768px: 30px;
+
+  --h4-font-family: Georgia, 'Times New Roman', Times, serif;
+  --h4-font-style: normal;
+  --h4-font-weight: 700;
+  --h4-font-size: 22px;
+  --h4-line-height: 28px;
+  --h4-font-size-768px: 20px;
+  --h4-line-height-768px: 26px;
+  --h4-font-size-320px: 18px;
+  --h4-line-height-320px: 24px;
+  --h4-color-black: #090909;
+  --h4-color-orange: #ff9c08;
+
+  --h5-font-family: Georgia, 'Times New Roman', Times, serif;
+  --h5-font-style: normal;
+  --h5-font-weight: 700;
+  --h5-font-size: 20px;
+  --h5-line-height: 26px;
+  --h5-font-size-768px: 18px;
+  --h5-line-height-768px: 24px;
+  --h5-font-size-320px: 16px;
+  --h5-line-height-320px: 20px;
+  --h5-color-black: #090909;
+  --h5-color-orange: #ff9c08;
+
+  --h6-font-family: Georgia, 'Times New Roman', Times, serif;
+  --h6-font-style: normal;
+  --h6-font-weight: 700;
+  --h6-font-size: 18px;
+  --h6-line-height: 24px;
+  --h6-font-size-768px: 16px;
+  --h6-line-height-768px: 20px;
+  --h6-color-black: #090909;
+  --h6-color-orange: #ff9c08;
 
   --text-font-family: Arial, Verdana, Univers, Futura, Helvetica, MS Sans Serif, Tahoma,
     Lucida Sans Unicode, sans-serif;
@@ -54,12 +90,16 @@
   --text-line-height-1024px: 30px;
   --text-font-size-768px: 18px;
   --text-line-height-768px: 26px;
+  --text-font-size-320px: 16px;
+  --text-line-height-320px: 20px;
   --text-transform: uppercase;
   --text-color-gray: #6e6e6e;
   --text-color-black: #090909;
   --text-color-white: #fff;
   --text-color-orange: #ff9c08;
 
+  --button-font-family: Arial, Verdana, Univers, Futura, Helvetica, MS Sans Serif, Tahoma,
+    Lucida Sans Unicode, sans-serif;
   --button-border: 1px solid #dad1ca;
   --button-padding: 24px 38px 24px;
   --button-background-color-orange: #ff9c08;
@@ -72,6 +112,8 @@
   --button-font-weight: 700;
   --button-font-size: 18px;
   --button-line-height: 20px;
+  --button-font-size-768px: 16px;
+  --button-line-height-768px: 18px;
   --button-text-align: center;
   --button-text-color-black: #000;
   --button-text-color-white: #fff;

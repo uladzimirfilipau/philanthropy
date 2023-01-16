@@ -24,11 +24,6 @@
 @media screen and (max-width: 768px) {
   .message {
     gap: 40px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .message {
     padding: var(--section-padding-320px);
   }
 }
