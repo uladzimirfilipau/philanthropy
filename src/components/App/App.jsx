@@ -18,6 +18,11 @@ import sophieMoore from '../../images/about-leader-01.jpeg';
 import johnCarter from '../../images/about-leader-02.jpeg';
 import emilyWeber from '../../images/about-leader-03.jpeg';
 
+import BlogArticle from '../BlogArticle/BlogArticle';
+import { NEWS } from '../../utils/consts';
+import newsFirstImage from '../../images/news-01.png';
+import newsSecondImage from '../../images/news-02.png';
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,6 +40,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
+
         <Route path='/sophie-moore'>
           <Leader leader={LEADERS.SOPHIE_MOORE} image={sophieMoore} />
         </Route>
@@ -44,6 +50,14 @@ function App() {
         <Route path='/emily-weber'>
           <Leader leader={LEADERS.EMILY_WEBER} image={emilyWeber} />
         </Route>
+
+        <Route path={NEWS.FIRST_NEWS.LINK}>
+          <BlogArticle news={NEWS.FIRST_NEWS} image={newsFirstImage} />
+        </Route>
+        <Route path={NEWS.SECOND_NEWS.LINK}>
+          <BlogArticle news={NEWS.SECOND_NEWS} image={newsSecondImage} />
+        </Route>
+
         <Route path='/donate' component={Donate} />
         <Route path='/contact' component={Contact} />
         <Route path='*' component={PageNotFound} />

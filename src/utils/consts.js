@@ -21,6 +21,32 @@ export const LEADERS = {
   },
 };
 
+export const NEWS = {
+  FIRST_NEWS: {
+    LINK: '/blog/what-to-donate-to-a-food-bank-and-what-to-avoid',
+    BUTTON_TEXT: 'Articles',
+    DATE: 'Feb 11, 2022',
+    TITLE: 'What to donate to a food bank and what to avoid?',
+    IMAGE_ALT: 'Food bank',
+  },
+
+  SECOND_NEWS: {
+    LINK: '/blog/13-ways-to-give-to-charity-without-breaking-your-budget',
+    BUTTON_TEXT: 'Resources',
+    DATE: 'Feb 11, 2022',
+    TITLE: '13 ways to give to charity without breaking your budget',
+    IMAGE_ALT: 'Clothes',
+  },
+
+  THIRD_NEWS: {
+    LINK: '/blog/new-campaign-to-help-vulnerable-communities-in-africa',
+    BUTTON_TEXT: 'News',
+    DATE: 'Feb 11, 2022',
+    TITLE: 'New campaign to help vulnerable communities in Africa',
+    IMAGE_ALT: 'Two children are smiling',
+  },
+};
+
 export const ASKED_QUESTIONS = [
   {
     id: '01',

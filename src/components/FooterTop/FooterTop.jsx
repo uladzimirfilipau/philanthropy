@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NEWS } from '../../utils/consts';
 import Logo from '../Logo/Logo';
 import './FooterTop.css';
 
@@ -24,7 +25,7 @@ function FooterTop() {
         <Link to='/blog' className='footer__link'>
           Blog
         </Link>
-        <Link to='/blog-post' className='footer__link'>
+        <Link to={NEWS.FIRST_NEWS.LINK} className='footer__link'>
           Blog post
         </Link>
         <Link to='/donate' className='footer__link'>
