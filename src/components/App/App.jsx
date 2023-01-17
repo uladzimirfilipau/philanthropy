@@ -12,6 +12,7 @@ import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import Leader from '../Leader/Leader';
 import Contact from '../Contact/Contact';
+import Blog from '../Blog/Blog';
 
 import { LEADERS } from '../../utils/consts';
 import sophieMoore from '../../images/about-leader-01.jpeg';
@@ -51,6 +52,7 @@ function App() {
           <Leader leader={LEADERS.EMILY_WEBER} image={emilyWeber} />
         </Route>
 
+        <Route exact path='/blog' component={Blog}></Route>
         <Route path={NEWS.FIRST_NEWS.LINK}>
           <BlogArticle news={NEWS.FIRST_NEWS} image={newsFirstImage} />
         </Route>

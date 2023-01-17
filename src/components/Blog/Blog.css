@@ -1,0 +1,212 @@
+.blog {
+  width: 100%;
+  max-width: 1440px;
+  padding-top: 110px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog__span {
+  display: block;
+  margin: 0 0 24px;
+  width: 140px;
+  height: 4px;
+  background: #ff9c08;
+}
+
+.blog__title {
+  margin: 0 30px 48px;
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  color: var(--h1-color);
+}
+
+@media screen and (max-width: 1280px) {
+  .blog__title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .blog__title {
+    font-size: var(--h1-font-size-1024px);
+    line-height: var(--h1-line-height-1024px);
+  }
+}
+
+.blog__figure {
+  width: 100%;
+  margin: 0;
+  padding-top: 250px;
+  padding-bottom: 50px;
+  padding-left: 200px;
+  padding-right: 500px;
+  box-sizing: border-box;
+  background-image: url(../../images/news-02.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .blog__figure {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blog__link {
+  width: 100%;
+  max-width: 750px;
+  display: block;
+  text-decoration: none;
+  transition: 300ms ease;
+}
+
+@media screen and (max-width: 1280px) {
+  .blog__link {
+    padding: 100px 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .blog__link {
+    padding: 50px 20px;
+  }
+}
+
+.blog__link:hover {
+  cursor: pointer;
+  transform: translate3d(0px, -3px, 0.01px);
+}
+
+.blog__link:hover .blog__item-title {
+  color: #ff9c08;
+}
+
+.blog__link:hover .blog__item-link {
+  color: #ff9c08;
+}
+
+.blog__link:hover .blog__item-link::after {
+  margin-left: 6px;
+}
+
+.blog__figcaption {
+  width: 100%;
+  max-width: 750px;
+  padding: 64px 56px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #f0ece8;
+  box-shadow: 0px 2px 12px rgba(43, 43, 43, 0.08);
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .blog__figcaption {
+    padding: 32px 28px;
+  }
+}
+
+.blog__item-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 640px) {
+  .blog__item-container {
+    flex-wrap: wrap;
+  }
+}
+
+.blog__item-button {
+  display: block;
+  max-width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 14px 23px 14px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #f0ece8;
+  border-radius: 6px;
+  cursor: pointer;
+
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #090909;
+}
+
+.blog__item-date {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #6e6e6e;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 640px) {
+  .blog__item-date {
+    font-size: 15px;
+  }
+}
+
+.blog__item-title {
+  margin: 18px 0 16px;
+  font-family: var(--h2-font-family);
+  font-style: var(--h2-font-style);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color-black);
+  transition: 300ms ease;
+}
+
+@media screen and (max-width: 768px) {
+  .blog__item-title {
+    font-size: var(--h2-font-size-768px);
+    line-height: var(--h2-line-height-768px);
+  }
+}
+
+.blog__item-text {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight);
+  font-size: var(--text-font-size-768px);
+  line-height: var(--text-line-height-768px);
+  color: var(--text-color-gray);
+}
+
+.blog__item-link {
+  display: block;
+  margin: 32px 0 0;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: #090909;
+  transition: 300ms ease;
+}
+
+.blog__item-link::after {
+  content: '\2794';
+  margin-left: 3px;
+  transition: 100ms ease;
+}
