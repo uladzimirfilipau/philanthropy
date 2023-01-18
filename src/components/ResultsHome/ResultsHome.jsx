@@ -5,7 +5,9 @@ import litersOfWater from '../../images/results-litersOfWater.svg';
 import housesBuilt from '../../images/results-housesBuilt.svg';
 import toysDelivered from '../../images/results-toysDelivered.svg';
 import schoolsBuilt from '../../images/results-schoolsBuilt.svg';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function ResultsHome() {
   return (
@@ -40,7 +42,7 @@ function ResultsHome() {
           </li>
         </ul>
 
-        <ButtonDonate />
+        <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
       </article>
 
       <img

@@ -2,7 +2,9 @@ import React from 'react';
 import './Mission.css';
 import sophieMoore from '../../images/about-leader-01.jpeg';
 import sophieMooreSignature from '../../images/sophie-moore-signature.svg';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Mission() {
   return (
@@ -16,7 +18,7 @@ function Mission() {
           adipiscing praesent velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi
           curabitur etiam nibh justo, lorem alique.
         </p>
-        <ButtonDonate />
+        <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
       </section>
 
       <section className='mission__article mission__article_back'>

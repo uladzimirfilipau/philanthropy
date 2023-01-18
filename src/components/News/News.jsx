@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './News.css';
-import newsImageFirst from '../../images/news-01.png';
-import newsImageSecond from '../../images/news-02.png';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
-import ButtonAbout from '../ButtonAbout/ButtonAbout';
-import { buttonNewsText } from '../../utils/consts';
+import { BUTTON } from '../../utils/consts';
+import NewsLink from '../NewsLink/NewsLink';
+import { NEWS } from '../../utils/consts';
+import firstImage from '../../images/news-01.png';
+import secondImage from '../../images/news-02.png';
+import { OrangeButton, WhiteButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function News() {
   return (
@@ -14,53 +15,16 @@ function News() {
       <h2 className='news__title'>Read our latest news</h2>
 
       <ul className='news__list'>
-        <li className='news__item'>
-          <figure className='news__figure'>
-            <img src={newsImageFirst} alt='Products' className='news__item-image' />
-            <figcaption className='news__item-description'>
-              <div className='news__item-container'>
-                <Link to='/about' className='news__item-button'>
-                  Articles
-                </Link>
-                <p className='news__item-date'>Feb 11, 2022</p>
-              </div>
-              <h3 className='news__item-title'>
-                What to donate to a food bank and what to avoid ?
-              </h3>
-              <Link to='/about' className='news__item-link'>
-                Read more
-              </Link>
-            </figcaption>
-          </figure>
-        </li>
-
-        <li className='news__item'>
-          <figure className='news__figure'>
-            <img src={newsImageSecond} alt='Clothes' className='news__item-image' />
-            <figcaption className='news__item-description'>
-              <div className='news__item-container'>
-                <Link to='/about' className='news__item-button'>
-                  Resources
-                </Link>
-                <p className='news__item-date'>Feb 11, 2022</p>
-              </div>
-              <h3 className='news__item-title'>
-                13 ways to give to charity without breaking your budget
-              </h3>
-              <Link to='/about' className='news__item-link'>
-                Read more
-              </Link>
-            </figcaption>
-          </figure>
-        </li>
+        <NewsLink news={NEWS.FIRST} image={firstImage} link={NEWS.FIRST.LINK} />
+        <NewsLink news={NEWS.SECOND} image={secondImage} link={NEWS.SECOND.LINK} />
       </ul>
 
-      <ul className='news__links'>
+      <ul className='news__buttons'>
         <li>
-          <ButtonDonate />
+          <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
         </li>
         <li>
-          <ButtonAbout buttonText={buttonNewsText} />
+          <ButtonLink link={BUTTON.LINK.BLOG} text={BUTTON.TEXT.NEWS} Button={WhiteButton} />
         </li>
       </ul>
     </section>

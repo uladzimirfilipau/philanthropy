@@ -1,9 +1,9 @@
 import React from 'react';
-import './Lead.css';
 import leadImage from '../../images/lead-image.png';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
-import ButtonAbout from '../ButtonAbout/ButtonAbout';
-import { buttonLeadText } from '../../utils/consts';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton, WhiteButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
+import './Lead.css';
 
 function Lead() {
   return (
@@ -17,10 +17,10 @@ function Lead() {
         </p>
         <ul className='lead__buttons'>
           <li>
-            <ButtonDonate />
+            <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
           </li>
           <li>
-            <ButtonAbout buttonText={buttonLeadText} />
+            <ButtonLink link={BUTTON.LINK.ABOUT} text={BUTTON.TEXT.CHARITY} Button={WhiteButton} />
           </li>
         </ul>
       </article>

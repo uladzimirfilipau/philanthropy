@@ -6,7 +6,9 @@ import YouTube from '../../images/YouTube.svg';
 import Pinterest from '../../images/Pinterest.svg';
 import Twitch from '../../images/Twitch.svg';
 import Webflow from '../../images/Webflow.svg';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import { OrangeButton } from '../Button/Button';
+import { BUTTON } from '../../utils/consts';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Partners() {
   return (
@@ -35,7 +37,7 @@ function Partners() {
         </li>
       </ul>
 
-      <ButtonDonate />
+      <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
     </section>
   );
 }
