@@ -21,8 +21,9 @@ import emilyWeber from '../../images/about-leader-03.jpeg';
 
 import BlogArticle from '../BlogArticle/BlogArticle';
 import { NEWS } from '../../utils/consts';
-import newsFirstImage from '../../images/news-01.png';
-import newsSecondImage from '../../images/news-02.png';
+import firstImage from '../../images/news-01.png';
+import secondImage from '../../images/news-02.png';
+import thirdImage from '../../images/news-03.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,11 +54,14 @@ function App() {
         </Route>
 
         <Route exact path='/blog' component={Blog}></Route>
-        <Route path={NEWS.FIRST_NEWS.LINK}>
-          <BlogArticle news={NEWS.FIRST_NEWS} image={newsFirstImage} />
+        <Route path={NEWS.FIRST.LINK}>
+          <BlogArticle news={NEWS.FIRST} image={firstImage} />
         </Route>
-        <Route path={NEWS.SECOND_NEWS.LINK}>
-          <BlogArticle news={NEWS.SECOND_NEWS} image={newsSecondImage} />
+        <Route path={NEWS.SECOND.LINK}>
+          <BlogArticle news={NEWS.SECOND} image={secondImage} />
+        </Route>
+        <Route path={NEWS.THIRD.LINK}>
+          <BlogArticle news={NEWS.THIRD} image={thirdImage} />
         </Route>
 
         <Route path='/donate' component={Donate} />
