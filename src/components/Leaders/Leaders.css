@@ -105,15 +105,16 @@
   display: block;
   width: fit-content;
   margin: 0;
-  padding: 25px 38px 25px;
+  padding: 24px 38px 24px;
   box-sizing: border-box;
   align-self: center;
   justify-self: flex-end;
   background: #ff9c08;
   border-radius: 10px;
   border: none;
-  text-decoration: none;
+  box-shadow: 3px 3px 5px rgba(43, 43, 43, 0.2);
 
+  text-decoration: none;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
