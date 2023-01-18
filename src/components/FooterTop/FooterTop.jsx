@@ -25,7 +25,7 @@ function FooterTop() {
         <Link to='/blog' className='footer__link'>
           Blog
         </Link>
-        <Link to={NEWS.FIRST_NEWS.LINK} className='footer__link'>
+        <Link to={NEWS.FIRST.LINK} className='footer__link'>
           Blog post
         </Link>
         <Link to='/donate' className='footer__link'>
