@@ -6,18 +6,20 @@ import foodImage from '../../images/help-food.svg';
 import helpImage from '../../images/help-help.svg';
 import educationImage from '../../images/help-education.svg';
 import healthImage from '../../images/help-health.svg';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Help() {
   return (
     <section className='help'>
-      <div className='help__container'>
-        <div className='help__titles'>
+      <figure className='help__figure'>
+        <figcaption className='help__figcaption'>
           <p className='help__subtitle'>How we help?</p>
           <h2 className='help__title'>What are we doing to assist these communities?</h2>
-        </div>
-        <ButtonDonate />
-      </div>
+        </figcaption>
+        <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
+      </figure>
 
       <ul className='help__list'>
         <li className='help__list-item'>

@@ -3,9 +3,9 @@ import './AboutUs.css';
 import aboutusImage01 from '../../images/aboutus-image-01.png';
 import aboutusImage02 from '../../images/aboutus-image-02.png';
 import aboutusImage03 from '../../images/aboutus-image-03.png';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
-import ButtonAbout from '../ButtonAbout/ButtonAbout';
-import { buttonAboutUsText } from '../../utils/consts';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton, WhiteButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function AboutUs() {
   return (
@@ -59,10 +59,14 @@ function AboutUs() {
         <section className='aboutus__column aboutus__column_reverse' aria-label='Links'>
           <ul className='aboutus__links'>
             <li>
-              <ButtonDonate />
+              <ButtonLink
+                link={BUTTON.LINK.DONATE}
+                text={BUTTON.TEXT.DONATE}
+                Button={OrangeButton}
+              />
             </li>
             <li>
-              <ButtonAbout buttonText={buttonAboutUsText} />
+              <ButtonLink link={BUTTON.LINK.ABOUT} text={BUTTON.TEXT.ABOUT} Button={WhiteButton} />
             </li>
           </ul>
 

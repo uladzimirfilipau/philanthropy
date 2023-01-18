@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ButtonLink from '../ButtonLink/ButtonLink';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton } from '../Button/Button';
 import './PageNotFound.css';
 
 function PageNotFound() {
@@ -12,9 +14,7 @@ function PageNotFound() {
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           nulla pariatur cepteur
         </p>
-        <Link to='/' className='notfound__link'>
-          Go home
-        </Link>
+        <ButtonLink link={BUTTON.LINK.HOME} text={BUTTON.TEXT.HOME} Button={OrangeButton} />
       </section>
     </main>
   );

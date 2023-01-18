@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Video.css';
 import backgroundImage from '../../images/video-image.png';
 import playIcon from '../../images/video-play-icon.svg';
-import ButtonAbout from '../ButtonAbout/ButtonAbout';
-import { buttonLeadText } from '../../utils/consts';
+import { BUTTON } from '../../utils/consts';
+import { BlackButton, WhiteButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Video() {
   return (
@@ -14,12 +14,10 @@ function Video() {
 
       <ul className='video__links'>
         <li>
-          <Link to='/donate' className='video__link '>
-            Donate now
-          </Link>
+          <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={BlackButton} />
         </li>
         <li>
-          <ButtonAbout buttonText={buttonLeadText} />
+          <ButtonLink link={BUTTON.LINK.ABOUT} text={BUTTON.TEXT.CHARITY} Button={WhiteButton} />
         </li>
       </ul>
 

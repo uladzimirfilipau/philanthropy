@@ -1,9 +1,9 @@
 import React from 'react';
 import './Charity.css';
 import image01 from '../../images/about-01.jpeg';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
-import ButtonAbout from '../ButtonAbout/ButtonAbout';
-import { buttonCharityText } from '../../utils/consts';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton, WhiteButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Charity() {
   return (
@@ -13,10 +13,10 @@ function Charity() {
         <h1 className='charity__title'>The mission behind our charity foundation</h1>
         <ul className='charity__links'>
           <li>
-            <ButtonDonate />
+            <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
           </li>
           <li>
-            <ButtonAbout buttonText={buttonCharityText} />
+            <ButtonLink link={BUTTON.LINK.BLOG} text={BUTTON.TEXT.HELP} Button={WhiteButton} />
           </li>
         </ul>
       </article>

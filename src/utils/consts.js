@@ -1,8 +1,25 @@
 export const MEDIUM_SCREEN = 768;
-export const buttonLeadText = 'About our charity';
-export const buttonAboutUsText = 'About us';
-export const buttonNewsText = 'Read more news';
-export const buttonCharityText = 'How can I help';
+
+export const BUTTON = {
+  TEXT: {
+    HOME: 'Go home',
+    DONATE: 'Donate now',
+    CHARITY: 'About our charity',
+    ABOUT: 'About us',
+    NEWS: 'Read more news',
+    HELP: 'How can I help',
+    RELATED_ARTICLES: 'Browse more',
+  },
+  LINK: {
+    HOME: '/',
+    DONATE: '/donate',
+    ABOUT: '/about',
+    BLOG: '/blog',
+    ARTICLES: '/articles',
+    RESOURCES: '/resources',
+    NEWS: '/news',
+  },
+};
 
 export const LEADERS = {
   SOPHIE_MOORE: {
@@ -22,7 +39,7 @@ export const LEADERS = {
 };
 
 export const NEWS = {
-  FIRST_NEWS: {
+  FIRST: {
     LINK: '/blog/what-to-donate-to-a-food-bank-and-what-to-avoid',
     BUTTON_TEXT: 'Articles',
     DATE: 'Feb 11, 2022',
@@ -30,7 +47,7 @@ export const NEWS = {
     IMAGE_ALT: 'Food bank',
   },
 
-  SECOND_NEWS: {
+  SECOND: {
     LINK: '/blog/13-ways-to-give-to-charity-without-breaking-your-budget',
     BUTTON_TEXT: 'Resources',
     DATE: 'Feb 11, 2022',
@@ -38,7 +55,7 @@ export const NEWS = {
     IMAGE_ALT: 'Clothes',
   },
 
-  THIRD_NEWS: {
+  THIRD: {
     LINK: '/blog/new-campaign-to-help-vulnerable-communities-in-africa',
     BUTTON_TEXT: 'News',
     DATE: 'Feb 11, 2022',

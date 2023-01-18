@@ -1,7 +1,9 @@
 import React from 'react';
 import './Testimonials.css';
 import image from '../../images/testimonials-image.png';
-import ButtonDonate from '../ButtonDonate/ButtonDonate';
+import { BUTTON } from '../../utils/consts';
+import { OrangeButton } from '../Button/Button';
+import ButtonLink from '../ButtonLink/ButtonLink';
 
 function Testimonials() {
   return (
@@ -33,7 +35,7 @@ function Testimonials() {
           <li className='testimonials__list-item'>Nibh mauris cursus mattis molestie a iaculis</li>
         </ul>
 
-        <ButtonDonate />
+        <ButtonLink link={BUTTON.LINK.DONATE} text={BUTTON.TEXT.DONATE} Button={OrangeButton} />
       </article>
     </section>
   );
