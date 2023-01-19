@@ -1,25 +1,28 @@
 import React from 'react';
 import './BlogArticle.css';
 import { Link } from 'react-router-dom';
+import RelatedArticles from '../RelatedArticles/RelatedArticles';
 
 function BlogArticle({ news, image }) {
+  const { BUTTON_TEXT, DATE, TITLE, IMAGE_ALT } = news;
+
   return (
     <main className='main'>
       <section className='article'>
         <figure className='article__figure'>
           <Link to='/articles' className='article__link'>
-            {news.BUTTON_TEXT}
+            {BUTTON_TEXT}
           </Link>
-          <figcaption className='article__date'>{news.DATE}</figcaption>
+          <figcaption className='article__date'>{DATE}</figcaption>
         </figure>
 
-        <h1 className='article__title'>{news.TITLE}</h1>
+        <h1 className='article__title'>{TITLE}</h1>
         <p className='article__description'>
           Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port
           titor sit males dolor sit.
         </p>
 
-        <img src={image} alt={news.IMAGE_ALT} className='article__image' />
+        <img src={image} alt={IMAGE_ALT} className='article__image' />
       </section>
 
       <section className='article article__subtitles'>
@@ -103,6 +106,7 @@ function BlogArticle({ news, image }) {
           eget dolor cosnectur drolo.
         </p>
       </section>
+      <RelatedArticles />
     </main>
   );
 }
