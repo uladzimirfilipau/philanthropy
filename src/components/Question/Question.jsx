@@ -14,7 +14,7 @@ function Question({ item }) {
   }`;
 
   return (
-    <li key={item.id} className='questions__item' onClick={toggleClick}>
+    <li className='questions__item' onClick={toggleClick}>
       <button type='button' className={buttonClassName}>
         <span className={buttonTextClassName}>+</span>
       </button>
