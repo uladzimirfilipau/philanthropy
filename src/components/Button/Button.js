@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Button = styled.button`
   width: fit-content;
   display: block;
-  padding: 24px 38px 24px;
+  padding: 24px 38px;
   box-sizing: border-box;
   border: none;
   border-radius: 10px;

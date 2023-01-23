@@ -1,11 +1,11 @@
 import React from 'react';
-import './BurgerButton.css';
+import { Button, Span } from './Styled';
 
 function BurgerButton({ handleOpenMenu }) {
   return (
-    <button type='button' className='header__burger-button' onClick={handleOpenMenu}>
-      <span></span>
-    </button>
+    <Button onClick={handleOpenMenu}>
+      <Span />
+    </Button>
   );
 }
 

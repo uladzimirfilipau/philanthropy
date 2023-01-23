@@ -1,12 +1,18 @@
 .blog {
   width: 100%;
   max-width: 1440px;
-  padding-top: 110px;
+  padding: 100px 0;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .blog {
+    padding: 50px 0;
+  }
 }
 
 .blog__span {
