@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 function PopupMenu({ isOpen, onClose }) {
   const width = useWindowWidth();
   const [isMobile, setIsMobile] = useState(false);
+  const popupMenuClassName = `popup-menu ${isOpen && 'popup-menu_opened'}`;
 
   useEffect(() => {
     width <= MEDIUM_SCREEN ? setIsMobile(true) : setIsMobile(false);
@@ -17,9 +18,9 @@ function PopupMenu({ isOpen, onClose }) {
   return (
     <>
       {isMobile && (
-        <section className={`popup-menu ${isOpen && 'popup-menu_opened'}`}>
+        <section className={popupMenuClassName}>
           <CloseButton onClose={onClose} />
-          <Navigation onClose={onClose} />
+          <Navigation onClose={onClose} isMobile={isMobile} />
           <Link to='/donate' className='header__link' onClick={onClose}>
             Donate now
           </Link>
