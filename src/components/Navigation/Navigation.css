@@ -1,7 +1,9 @@
 .nav {
   margin-left: 40px;
   display: flex;
+  align-items: center;
   gap: 26px;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -13,7 +15,6 @@
 
 .nav__link {
   text-decoration: none;
-
   font-family: var(--text-font-family);
   font-style: var(--text-font-style);
   font-weight: var(--text-font-weight-400);
@@ -30,5 +31,114 @@
 }
 
 .nav__link:hover {
+  cursor: pointer;
+  color: var(--text-color-orange);
+}
+
+.nav__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  font-family: var(--text-font-family);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight-400);
+  font-size: var(--text-font-size-1024px);
+  line-height: var(--text-line-height-1024px);
+  color: var(--text-color-black);
+
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__button {
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+  }
+}
+
+.nav__button:hover {
+  cursor: pointer;
+  color: var(--text-color-orange);
+}
+
+.nav__button::after {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  content: '\2039';
+  transform: rotate(-90deg);
+  font-size: var(--text-font-size);
+}
+
+.nav__button_active {
+  color: var(--text-color-orange);
+}
+
+.nav__button_active::after {
+  position: absolute;
+  right: -18px;
+  content: '\2039';
+  transform: rotate(90deg);
+  font-size: var(--text-font-size);
+}
+
+.nav__links {
+  margin: 0;
+  padding: 48px;
+  box-sizing: border-box;
+  border: 1px solid #f0ece8;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(43 43 43 / 18%);
+
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+
+  position: absolute;
+  top: 30px;
+  left: 150px;
+
+  transition: 300ms ease;
+}
+
+.nav__links_active {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__links_active {
+    align-items: center;
+    position: sticky;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.nav__links-item {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  white-space: nowrap;
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #6e6e6e;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__links-item {
+    text-align: center;
+  }
+}
+
+.nav__links-item:hover {
+  cursor: pointer;
   color: var(--text-color-orange);
 }
