@@ -101,3 +101,13 @@ export const ASKED_QUESTIONS = [
   elit etiam cursus orci in. Id sed montes.`,
   },
 ];
+
+export const links = [
+  { name: 'Home', link: '/' },
+  { name: 'About', link: '/about' },
+  { name: 'Blog', link: '/blog' },
+  { name: 'Blog Post', link: '/blog/what-to-donate-to-a-food-bank-and-what-to-avoid' },
+  { name: 'Donate', link: '/donate' },
+  { name: 'Donate Single', link: '/donate-single' },
+  { name: 'Contact', link: '/contact' },
+];
