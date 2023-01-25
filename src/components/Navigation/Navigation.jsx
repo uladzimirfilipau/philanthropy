@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDetectOutsideClick } from '../../hooks/useDetectOutsideClick';
 import { links } from '../../utils/consts';
 import NavigationLink from '../NavigationLink/NavigationLink';
 import './Navigation.css';
 
 function Navigation({ onClose, isMobile }) {
-  const [isActive, setIsActive] = useState(false);
+  const dropdownRef = useRef(null);
+  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const navButtonClassName = `nav__button ${isActive && 'nav__button_active'}`;
   const navLinksClassName = `nav__links ${isActive && 'nav__links_active'}`;
 
@@ -24,7 +26,7 @@ function Navigation({ onClose, isMobile }) {
   ));
 
   return (
-    <nav className='nav'>
+    <nav className='nav' ref={dropdownRef}>
       <NavLink to='/' className='nav__link' onClick={onClose}>
         Home
       </NavLink>
