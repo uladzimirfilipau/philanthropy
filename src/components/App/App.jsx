@@ -5,14 +5,15 @@ import './App.css';
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import About from '../About/About';
+import Blog from '../Blog/Blog';
+import Leader from '../Leader/Leader';
 import Donate from '../Donate/Donate';
+import DonateSingle from '../DonateSingle/DonateSingle';
+import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import PopupMenu from '../PopupMenu/PopupMenu';
 import ScrollUpButton from '../ScrollUpButton/ScrollUpButton';
 import PageNotFound from '../PageNotFound/PageNotFound';
-import Leader from '../Leader/Leader';
-import Contact from '../Contact/Contact';
-import Blog from '../Blog/Blog';
 
 import { LEADERS } from '../../utils/consts';
 import sophieMoore from '../../images/about-leader-01.jpeg';
@@ -38,7 +39,7 @@ function App() {
 
   return (
     <>
-      <Header handleOpenMenu={handleOpenMenu} onClose={handleCloseMenu} />
+      <Header handleOpenMenu={handleOpenMenu} />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
@@ -65,6 +66,7 @@ function App() {
         </Route>
 
         <Route path='/donate' component={Donate} />
+        <Route path='/donate-single' component={DonateSingle} />
         <Route path='/contact' component={Contact} />
         <Route path='*' component={PageNotFound} />
       </Switch>
