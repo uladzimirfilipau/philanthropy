@@ -22,20 +22,17 @@ import emilyWeber from '../../images/about-leader-03.jpeg';
 
 import BlogArticle from '../BlogArticle/BlogArticle';
 import { NEWS } from '../../utils/consts';
-import firstImage from '../../images/news-01.png';
-import secondImage from '../../images/news-02.png';
-import thirdImage from '../../images/news-03.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleOpenMenu = () => setIsMenuOpen(true);
+  const handleCloseMenu = () => setIsMenuOpen(false);
 
-  function handleOpenMenu() {
-    setIsMenuOpen(true);
-  }
-
-  function handleCloseMenu() {
-    setIsMenuOpen(false);
-  }
+  const blogArticles = NEWS.map((item) => (
+    <Route key={item.id} exact path={item.LINK}>
+      <BlogArticle key={item.id} item={item} />
+    </Route>
+  ));
 
   return (
     <>
@@ -54,16 +51,8 @@ function App() {
           <Leader leader={LEADERS.EMILY_WEBER} image={emilyWeber} />
         </Route>
 
-        <Route exact path='/blog' component={Blog}></Route>
-        <Route path={NEWS.FIRST.LINK}>
-          <BlogArticle news={NEWS.FIRST} image={firstImage} />
-        </Route>
-        <Route path={NEWS.SECOND.LINK}>
-          <BlogArticle news={NEWS.SECOND} image={secondImage} />
-        </Route>
-        <Route path={NEWS.THIRD.LINK}>
-          <BlogArticle news={NEWS.THIRD} image={thirdImage} />
-        </Route>
+        <Route exact path='/blog' component={Blog} />
+        {blogArticles}
 
         <Route path='/donate' component={Donate} />
         <Route path='/donate-single' component={DonateSingle} />
