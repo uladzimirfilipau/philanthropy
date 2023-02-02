@@ -5,6 +5,13 @@ import IMAGE04 from '../images/news-04.png';
 import IMAGE05 from '../images/news-05.png';
 import IMAGE06 from '../images/news-06.png';
 
+import houseImage from '../images/help-house.svg';
+import loveImage from '../images/help-love.svg';
+import foodImage from '../images/help-food.svg';
+import helpImage from '../images/help-help.svg';
+import educationImage from '../images/help-education.svg';
+import healthImage from '../images/help-health.svg';
+
 export const MEDIUM_SCREEN = 768;
 
 export const BUTTON = {
@@ -27,6 +34,57 @@ export const BUTTON = {
     NEWS: '/news',
   },
 };
+
+export const HELP_LIST = [
+  {
+    ID: '1',
+    IMAGE: houseImage,
+    IMG_ALT: 'House',
+    TITLE: 'House & shelter',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+  {
+    ID: '2',
+    IMAGE: loveImage,
+    IMG_ALT: 'Love',
+    TITLE: 'Love & support',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+  {
+    ID: '3',
+    IMAGE: foodImage,
+    IMG_ALT: 'Food',
+    TITLE: 'Food & groceries',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+  {
+    ID: '4',
+    IMAGE: helpImage,
+    IMG_ALT: 'Help',
+    TITLE: 'Environmental help',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+  {
+    ID: '5',
+    IMAGE: educationImage,
+    IMG_ALT: 'Education',
+    TITLE: 'Education',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+  {
+    ID: '6',
+    IMAGE: healthImage,
+    IMG_ALT: 'Health & insurance',
+    TITLE: 'Health & insurance',
+    TEXT: `Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalar dolor elementum
+  tempus hac.`,
+  },
+];
 
 export const LEADERS = {
   SOPHIE_MOORE: {
