@@ -61,3 +61,16 @@ export const BlackButton = styled(Button)`
     outline: 1px solid #dad1ca;
   }
 `;
+
+export const NavButton = styled(Button)`
+  color: #000;
+  background-color: #fff;
+  outline: 1px solid #dad1ca;
+  padding: 18px 28px;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    outline: none;
+  }
+`;
