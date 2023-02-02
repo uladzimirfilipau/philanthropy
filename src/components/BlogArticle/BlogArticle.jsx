@@ -3,8 +3,8 @@ import './BlogArticle.css';
 import { Link } from 'react-router-dom';
 import RelatedArticles from '../RelatedArticles/RelatedArticles';
 
-function BlogArticle({ news, image }) {
-  const { BUTTON_TEXT, DATE, TITLE, IMAGE_ALT } = news;
+function BlogArticle({ item }) {
+  const { BUTTON_TEXT, DATE, TITLE, IMAGE_ALT, IMAGE } = item;
 
   return (
     <main className='main'>
@@ -22,7 +22,7 @@ function BlogArticle({ news, image }) {
           titor sit males dolor sit.
         </p>
 
-        <img src={image} alt={IMAGE_ALT} className='article__image' />
+        <img src={IMAGE} alt={IMAGE_ALT} className='article__image' />
       </section>
 
       <section className='article article__subtitles'>
@@ -106,6 +106,7 @@ function BlogArticle({ news, image }) {
           eget dolor cosnectur drolo.
         </p>
       </section>
+
       <RelatedArticles />
     </main>
   );
