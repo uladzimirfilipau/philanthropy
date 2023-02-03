@@ -2,9 +2,11 @@ import React from 'react';
 import './Blog.css';
 import { NEWS } from '../../utils/consts';
 import { Link } from 'react-router-dom';
+import LatestArticles from '../LatestArticles/LatestArticles';
 
 function Blog() {
-  const { LINK, BUTTON_TEXT, DATE, TITLE } = NEWS.FIRST;
+  const news = NEWS[0];
+  const { LINK, BUTTON_TEXT, DATE, TITLE } = news;
 
   return (
     <main className='main'>
@@ -30,6 +32,8 @@ function Blog() {
           </Link>
         </figure>
       </section>
+
+      <LatestArticles />
     </main>
   );
 }

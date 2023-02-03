@@ -4,7 +4,7 @@ import { donateListTitles } from '../../utils/consts';
 import './Donate.css';
 
 function Donate() {
-  const listItems = donateListTitles.map((item) => <DonateListItem key={item} title={item} />);
+  const listItems = donateListTitles.map((title) => <DonateListItem key={title} title={title} />);
 
   return (
     <main className='main'>

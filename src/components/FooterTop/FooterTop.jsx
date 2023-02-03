@@ -5,6 +5,9 @@ import Logo from '../Logo/Logo';
 import './FooterTop.css';
 
 function FooterTop() {
+  const news = NEWS[0];
+  const { LINK } = news;
+
   return (
     <section className='footer__top'>
       <article className='footer__description'>
@@ -25,7 +28,7 @@ function FooterTop() {
         <Link to='/blog' className='footer__link'>
           Blog
         </Link>
-        <Link to={NEWS.FIRST.LINK} className='footer__link'>
+        <Link to={LINK} className='footer__link'>
           Blog post
         </Link>
         <Link to='/donate' className='footer__link'>

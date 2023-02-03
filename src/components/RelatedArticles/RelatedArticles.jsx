@@ -4,11 +4,12 @@ import { BUTTON } from '../../utils/consts';
 import { WhiteButton } from '../Button/Button';
 import NewsLink from '../NewsLink/NewsLink';
 import { NEWS } from '../../utils/consts';
-import secondImage from '../../images/news-02.png';
-import thirdImage from '../../images/news-03.png';
 import ButtonLink from '../ButtonLink/ButtonLink';
 
 function RelatedArticles() {
+  const news = NEWS.slice(0, 2);
+  const listItems = news.map((item) => <NewsLink key={item.id} item={item} />);
+
   return (
     <section className='related-articles'>
       <div className='related-articles__title-container'>
@@ -20,10 +21,7 @@ function RelatedArticles() {
         />
       </div>
 
-      <ul className='news__list'>
-        <NewsLink news={NEWS.SECOND} image={secondImage} link={NEWS.SECOND.LINK} />
-        <NewsLink news={NEWS.THIRD} image={thirdImage} link={NEWS.THIRD.LINK} />
-      </ul>
+      <ul className='news__list'>{listItems}</ul>
     </section>
   );
 }
