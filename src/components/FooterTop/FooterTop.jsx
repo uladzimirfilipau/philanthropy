@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NEWS } from '../../utils/consts';
+import { links } from '../../utils/consts';
 import Logo from '../Logo/Logo';
 import './FooterTop.css';
 
 function FooterTop() {
-  const news = NEWS[0];
-  const { LINK } = news;
+  const footerLinks = links.map(({ name, link }) => (
+    <Link key={name} to={link} className='footer__link'>
+      {name}
+    </Link>
+  ));
 
   return (
     <section className='footer__top'>
@@ -19,27 +22,7 @@ function FooterTop() {
 
       <nav className='footer__links'>
         Menu
-        <Link to='/' className='footer__link'>
-          Home
-        </Link>
-        <Link to='/about' className='footer__link'>
-          About
-        </Link>
-        <Link to='/blog' className='footer__link'>
-          Blog
-        </Link>
-        <Link to={LINK} className='footer__link'>
-          Blog post
-        </Link>
-        <Link to='/donate' className='footer__link'>
-          Donate
-        </Link>
-        <Link to='/donate-single' className='footer__link'>
-          Donate Single
-        </Link>
-        <Link to='/contact' className='footer__link'>
-          Contact
-        </Link>
+        {footerLinks}
       </nav>
 
       <article className='footer__buttons'>
