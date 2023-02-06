@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Leaders.css';
-import sophieMoore from '../../images/about-leader-01.jpeg';
-import johnCarter from '../../images/about-leader-02.jpeg';
-import emilyWeber from '../../images/about-leader-03.jpeg';
 import volunteersImage from '../../images/about-leaders.svg';
+import { LEADERS } from '../../utils/consts';
 
 function Leaders() {
+  const listItems = LEADERS.map(({ LINK, TITLE, FIGCAPTION, IMAGE }) => (
+    <li key={TITLE} className='leaders__item'>
+      <Link to={LINK} className='leaders__item-link'>
+        <figure className='leaders__figure'>
+          <img src={IMAGE} alt={TITLE} className='leaders__image' />
+          <figcaption className='leaders__figcaption'>
+            <p className='leaders__figcaption-title'>{TITLE}</p>
+            <p className='leaders__figcaption-text'>{FIGCAPTION}</p>
+          </figcaption>
+        </figure>
+      </Link>
+    </li>
+  ));
+
   return (
     <section className='leaders'>
       <article className='leaders__article'>
@@ -20,43 +32,7 @@ function Leaders() {
         </Link>
       </article>
 
-      <ul className='leaders__list'>
-        <li className='leaders__item'>
-          <Link to='/sophie-moore' className='leaders__item-link'>
-            <figure className='leaders__figure'>
-              <img src={sophieMoore} alt='Sophie Moore' className='leaders__image' />
-              <figcaption className='leaders__figcaption'>
-                <p className='leaders__figcaption-title'>Sophie Moore</p>
-                <p className='leaders__figcaption-text'>Founder</p>
-              </figcaption>
-            </figure>
-          </Link>
-        </li>
-
-        <li className='leaders__item'>
-          <Link to='/john-carter' className='leaders__item-link'>
-            <figure className='leaders__figure'>
-              <img src={johnCarter} alt='John Carter' className='leaders__image' />
-              <figcaption className='leaders__figcaption'>
-                <p className='leaders__figcaption-title'>John Carter</p>
-                <p className='leaders__figcaption-text'>Head of Partnerships</p>
-              </figcaption>
-            </figure>
-          </Link>
-        </li>
-
-        <li className='leaders__item'>
-          <Link to='/emily-weber' className='leaders__item-link'>
-            <figure className='leaders__figure'>
-              <img src={emilyWeber} alt='Emily Weber' className='leaders__image' />
-              <figcaption className='leaders__figcaption'>
-                <p className='leaders__figcaption-title'>Emily Weber</p>
-                <p className='leaders__figcaption-text'>Head of Donations</p>
-              </figcaption>
-            </figure>
-          </Link>
-        </li>
-      </ul>
+      <ul className='leaders__list'>{listItems}</ul>
 
       <figure className='leaders__container'>
         <img src={volunteersImage} alt='Volunteers' className='leaders__container-image' />

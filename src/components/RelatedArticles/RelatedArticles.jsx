@@ -8,7 +8,7 @@ import ButtonLink from '../ButtonLink/ButtonLink';
 
 function RelatedArticles() {
   const news = NEWS.slice(0, 2);
-  const listItems = news.map((item) => <NewsLink key={item.id} item={item} />);
+  const listItems = news.map((item) => <NewsLink key={item.ID} item={item} />);
 
   return (
     <section className='related-articles'>
