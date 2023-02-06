@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Question.css';
 
 function Question({ item }) {
+  const { subtitle, text } = item;
   const [showText, setShowText] = useState(false);
 
   const toggleClick = () => {
@@ -19,8 +20,8 @@ function Question({ item }) {
         <span className={buttonTextClassName}>+</span>
       </button>
       <article className='questions__article'>
-        <h3 className='questions__subtitle'>{item.subtitle}</h3>
-        {showText && <p className='questions__text'>{item.text}</p>}
+        <h3 className='questions__subtitle'>{subtitle}</h3>
+        {showText && <p className='questions__text'>{text}</p>}
       </article>
     </li>
   );
