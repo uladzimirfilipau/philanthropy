@@ -6,12 +6,14 @@ import twitterIcon from '../../images/icon-twitter.png';
 import instagramIcon from '../../images/icon-instagram.png';
 import linkedInIcon from '../../images/icon-linkedin.png';
 
-function Leader({ leader, image }) {
+function Leader({ item }) {
+  const { IMAGE, TITLE, SUBTITLE } = item;
+
   return (
     <main className='main'>
       <section className='leader'>
-        <img src={image} alt={leader.TITLE} className='leader__image' />
-        <h1 className='leader__title'>{leader.TITLE}</h1>
+        <img src={IMAGE} alt={TITLE} className='leader__image' />
+        <h1 className='leader__title'>{TITLE}</h1>
 
         <ul className='leader__links'>
           <li className='leader__item'>
@@ -57,7 +59,7 @@ function Leader({ leader, image }) {
         </ul>
 
         <article className='leader__article'>
-          <h2 className='leader__article-subtitle'>{leader.SUBTITLE}</h2>
+          <h2 className='leader__article-subtitle'>{SUBTITLE}</h2>
           <p className='leader__article-text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
