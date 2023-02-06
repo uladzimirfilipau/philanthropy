@@ -12,6 +12,10 @@ import helpImage from '../images/help-help.svg';
 import educationImage from '../images/help-education.svg';
 import healthImage from '../images/help-health.svg';
 
+import sophieMoore from '../images/about-leader-01.jpeg';
+import johnCarter from '../images/about-leader-02.jpeg';
+import emilyWeber from '../images/about-leader-03.jpeg';
+
 export const MEDIUM_SCREEN = 768;
 
 export const BUTTON = {
@@ -86,22 +90,31 @@ export const HELP_LIST = [
   },
 ];
 
-export const LEADERS = {
-  SOPHIE_MOORE: {
+export const LEADERS = [
+  {
+    LINK: '/sophie-moore',
     TITLE: 'Sophie Moore',
     SUBTITLE: 'About Sophie Moore',
+    FIGCAPTION: 'Founder',
+    IMAGE: sophieMoore,
   },
 
-  JOHN_CARTER: {
+  {
+    LINK: '/john-carter',
     TITLE: 'John Carter',
     SUBTITLE: 'About John Carter',
+    FIGCAPTION: 'Head of Partnerships',
+    IMAGE: johnCarter,
   },
 
-  EMILY_WEBER: {
+  {
+    LINK: '/emily-weber',
     TITLE: 'Emily Weber',
     SUBTITLE: 'About Emily Weber',
+    FIGCAPTION: 'Head of Donations',
+    IMAGE: emilyWeber,
   },
-};
+];
 
 export const NEWS = [
   {
@@ -204,6 +217,8 @@ export const ASKED_QUESTIONS = [
 ];
 
 export const links = [
+  { name: 'Home', link: '/' },
+  { name: 'About', link: '/about' },
   { name: 'Blog', link: '/blog' },
   { name: 'Blog Post', link: '/blog/what-to-donate-to-a-food-bank-and-what-to-avoid' },
   { name: 'Donate', link: '/donate' },
